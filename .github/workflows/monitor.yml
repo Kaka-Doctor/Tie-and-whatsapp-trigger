@@ -29,6 +29,14 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      - name: Refresh latest monitor state
+        # Queued runs can start from an older commit than the latest state
+        # commit — always pick up the freshest state.json before running.
+        run: |
+          git fetch origin main
+          git checkout origin/main -- state.json 2>/dev/null \
+            || echo "no remote state.json yet (first run)"
+
       - name: Run TIE monitor
         env:
           WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
@@ -46,6 +54,11 @@ jobs:
             echo "state.json unchanged"
           else
             git commit -m "chore: monitor state update [skip ci]"
-            git pull --rebase origin main || true
-            git push origin main
+            # if another run pushed state meanwhile, prefer OUR newer state
+            if git pull --rebase -X theirs origin main; then
+              git push origin main || echo "⚠️ state push failed (will retry next run)"
+            else
+              git rebase --abort 2>/dev/null || true
+              echo "⚠️ state rebase failed — keeping remote state, local state dropped"
+            fi
           fi
