@@ -1,0 +1,51 @@
+name: TIE Library Monitor
+
+on:
+  schedule:
+    # Every 4 hours (UTC). Tanzania = UTC+3, so this runs at 03,07,11,15,19,23 EAT.
+    # Change freely — GitHub Actions cron is forgiving (may be delayed a few minutes).
+    - cron: "0 */4 * * *"
+  workflow_dispatch:
+    inputs:
+      send_test:
+        description: "Send a test WhatsApp message (checks CallMeBot setup)"
+        type: boolean
+        default: false
+  push:
+    branches: [main]
+
+permissions:
+  contents: write        # needed to commit state.json back to the repo
+
+concurrency:
+  group: tie-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Run TIE monitor
+        env:
+          WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
+          CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
+          TEST_MODE: ${{ github.event.inputs.send_test == 'true' && '1' || '0' }}
+        run: python3 monitor.py
+
+      - name: Commit updated state
+        if: always()
+        run: |
+          git config user.name  "TIE Monitor Bot"
+          git config user.email "actions@github.com"
+          git add state.json || true
+          if git diff --cached --quiet; then
+            echo "state.json unchanged"
+          else
+            git commit -m "chore: monitor state update [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main
+          fi
