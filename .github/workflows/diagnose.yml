@@ -1,0 +1,89 @@
+name: Diagnose TIE connectivity
+
+on:
+  workflow_dispatch:
+  push:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: DNS resolution
+        run: |
+          echo "== getent ol.tie.go.tz =="
+          getent hosts ol.tie.go.tz || echo "DNS FAILED"
+          echo "== dig A =="
+          dig +short ol.tie.go.tz A || true
+
+      - name: Test connectivity to TIE online library
+        run: |
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+          BOOK='https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_Form_6.html'
+
+          echo "=========== 1. HOMEPAGE ==========="
+          curl -sS -m 90 -A "$UA" -o /tmp/home.html \
+            -w "STATUS=%{http_code} SIZE=%{size_download} TTFB=%{time_starttransfer} TOTAL=%{time_total}\n" \
+            https://ol.tie.go.tz/ || echo "HOMEPAGE FAILED"
+
+          if [ -s /tmp/home.html ]; then
+            echo "----- homepage first 1200 chars -----"
+            head -c 1200 /tmp/home.html
+            echo ""
+            echo "----- script/link tags -----"
+            grep -oE '<(script|link)[^>]*(src|href)="[^"]*"[^>]*>' /tmp/home.html | head -30 || true
+            echo "----- occurrences of api/uploaded_files (in html) -----"
+            grep -oE '[a-zA-Z0-9_/.-]*api[a-zA-Z0-9_/.-]*' /tmp/home.html | sort -u | head -20 || true
+          fi
+
+          echo "=========== 2. THE DIVINITY FORM 6 BOOK URL ==========="
+          curl -sS -m 60 -A "$UA" -o /tmp/book.html \
+            -w "STATUS=%{http_code} SIZE=%{size_download} TTFB=%{time_starttransfer} TOTAL=%{time_total}\n" \
+            "$BOOK" || echo "BOOK URL FAILED"
+          if [ -s /tmp/book.html ]; then
+            echo "----- book page first 800 chars -----"
+            head -c 800 /tmp/book.html
+          fi
+
+          echo "=========== 3. COMMON API / CATALOG PATHS ==========="
+          for p in api api/books api/v1/books api/public/books books collection catalogue explore \
+                   api/books/public api/book uploaded_files/books/; do
+            code=$(curl -sS -m 25 -A "$UA" -o /tmp/probe.out -w "%{http_code}" "https://ol.tie.go.tz/$p" 2>/dev/null || echo "ERR")
+            size=$(stat -c%s /tmp/probe.out 2>/dev/null || echo 0)
+            echo "GET /$p -> $code (${size} bytes)"
+            if [ "$code" = "200" ] && [ "$size" -gt 200 ]; then
+              echo "--- first 400 chars of /$p ---"
+              head -c 400 /tmp/probe.out
+              echo ""
+            fi
+          done
+
+      - name: Inspect JS bundle for API endpoints
+        run: |
+          if [ -s /tmp/home.html ]; then
+            echo "== downloading JS bundles =="
+            grep -oE 'src="[^"]*\.js[^"]*"' /tmp/home.html | sed 's/src="//;s/"$//' | while read -r u; do
+              case "$u" in
+                http*) url="$u" ;;
+                /*) url="https://ol.tie.go.tz$u" ;;
+                *) url="https://ol.tie.go.tz/$u" ;;
+              esac
+              echo "--- $url"
+              curl -sS -m 40 "https://ol.tie.go.tz" -o /dev/null -w "" 2>/dev/null || true
+              curl -sS -m 60 -A "Mozilla/5.0" -o /tmp/bundle.js "$url" 2>/dev/null \
+                && echo "    saved $(stat -c%s /tmp/bundle.js 2>/dev/null) bytes" || echo "    FAILED"
+              if [ -s /tmp/bundle.js ]; then
+                echo "    --- api-ish paths in bundle ---"
+                grep -oE '"/[a-zA-Z0-9_/-]*(api|books|uploaded|catalog)[a-zA-Z0-9_/{}$.-]*"' /tmp/bundle.js | sort -u | head -25 || true
+                grep -oE '`/[a-zA-Z0-9_/-]*(api|books)[a-zA-Z0-9_/{}$.-]*`' /tmp/bundle.js | sort -u | head -10 || true
+                cp /tmp/bundle.js "/tmp/bundle_$(echo "$url" | md5sum | cut -c1-8).js" 2>/dev/null || true
+              fi
+            done
+            ls -la /tmp/bundle_*.js 2>/dev/null || true
+          else
+            echo "no homepage HTML saved; skipping JS inspection"
+          fi
+
+      - name: Response headers of homepage
+        run: |
+          curl -sSI -m 40 -A "Mozilla/5.0" https://ol.tie.go.tz/ 2>&1 | head -25 || true
