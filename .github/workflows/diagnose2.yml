@@ -1,0 +1,55 @@
+name: Diagnose v2
+
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [none]
+
+jobs:
+  diag:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: 1. Wayback CDX - what is archived under ol.tie.go.tz
+        run: |
+          echo "=== CDX domain-wide (collapsed) ==="
+          curl -sS -m 90 "https://web.archive.org/cdx/search/cdx?url=ol.tie.go.tz*&output=text&fl=timestamp,original,statuscode&limit=200&collapse=urlkey" | head -60 || echo "CDX domain query failed"
+          echo ""
+          echo "=== CDX uploaded_files/books ==="
+          curl -sS -m 90 "https://web.archive.org/cdx/search/cdx?url=ol.tie.go.tz/uploaded_files/books*&output=text&fl=timestamp,original,statuscode&limit=200&collapse=urlkey" | head -60 || echo "CDX books query failed"
+
+      - name: 2. Availability API
+        run: |
+          curl -sS -m 30 "https://archive.org/wayback/available?url=ol.tie.go.tz" ; echo ""
+          curl -sS -m 30 "https://archive.org/wayback/available?url=ol.tie.go.tz/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_Form_6.html" ; echo ""
+
+      - name: 3. Save-Page-Now live test homepage
+        run: |
+          curl -sSL -m 240 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" \
+            "https://web.archive.org/save/https://ol.tie.go.tz/" \
+            -o /tmp/spn_home.html -w "STATUS=%{http_code} SIZE=%{size_download} TOTAL=%{time_total} FINAL=%{url_effective}\n"
+          echo "--- first 500 chars ---"
+          head -c 500 /tmp/spn_home.html || true
+
+      - name: 4. Save-Page-Now live test book URL
+        run: |
+          curl -sSL -m 240 -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" \
+            "https://web.archive.org/save/https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_Form_6.html" \
+            -o /tmp/spn_book.html -w "STATUS=%{http_code} SIZE=%{size_download} TOTAL=%{time_total} FINAL=%{url_effective}\n"
+          echo "--- first 500 chars ---"
+          head -c 500 /tmp/spn_book.html || true
+
+      - name: 5. CDX after saves
+        run: |
+          sleep 10
+          curl -sS -m 90 "https://web.archive.org/cdx/search/cdx?url=ol.tie.go.tz*&output=text&fl=timestamp,original,statuscode&limit=30" | head -30 || true
+
+      - name: 6. www.tie.go.tz news + RSS probe
+        run: |
+          UA='Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'
+          for p in feed rss news habari category/habari; do
+            code=$(curl -sS -m 30 -A "$UA" -o /tmp/feed_probe -w "%{http_code}" "https://www.tie.go.tz/$p" 2>/dev/null || echo ERR)
+            size=$(stat -c%s /tmp/feed_probe 2>/dev/null || echo 0)
+            echo "GET /$p -> $code ($size bytes)"
+            if [ "$code" = "200" ] && [ "$size" -gt 500 ]; then head -c 300 /tmp/feed_probe; echo ""; fi
+          done
