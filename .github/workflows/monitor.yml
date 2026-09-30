@@ -2,9 +2,12 @@ name: TIE Library Monitor
 
 on:
   schedule:
-    # Every 4 hours (UTC). Tanzania = UTC+3, so this runs at 03,07,11,15,19,23 EAT.
-    # Change freely — GitHub Actions cron is forgiving (may be delayed a few minutes).
-    - cron: "0 */4 * * *"
+    # Every 4 hours at :17 past the hour (UTC). Tanzania = UTC+3 → 03:17,
+    # 07:17, 11:17, 15:17, 19:17, 23:17 EAT.
+    # NOTE: minute 0 (top of the hour) is GitHub Actions' highest-load slot —
+    # scheduled runs there are routinely delayed for hours or dropped, so we
+    # deliberately fire off-peak.
+    - cron: "17 */4 * * *"
   workflow_dispatch:
     inputs:
       send_test:

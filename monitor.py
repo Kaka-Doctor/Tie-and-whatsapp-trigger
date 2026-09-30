@@ -9,16 +9,24 @@ alerts through CallMeBot (free for personal use).
 
 Why multiple signal paths?
   ol.tie.go.tz is frequently unreachable from outside Tanzania (connection
-  timeouts from US/EU datacenters). The monitor therefore combines:
+  timeouts from US/EU datacenters), and in 2026 the site was rebuilt as a
+  React single-page app backed by a JSON API — the old static tree under
+  /uploaded_files/books/ is gone. The monitor therefore combines, in order
+  of authority:
 
-    1. DIRECT HTTPS enumeration — full crawl of the /uploaded_files/books/
-       tree (directory listings), sitemap.xml and catalogue API probes,
-       whenever the site accepts us. These runs are exact.
-    2. Wayback "Save Page Now" — archive.org fetches the library homepage
+    1. PUBLIC CATALOGUE API — /api/public/books (paginated JSON) is the
+       new site's authoritative book list: new uploads, re-publications
+       and delistings are detected here. PRIMARY signal.
+    2. Legacy direct enumeration — crawl of the old /uploaded_files/books/
+       static tree and sitemap.xml (kept in case TIE re-enables them).
+    3. Wayback "Save Page Now" — archive.org fetches the library homepage
        for us; the fresh snapshot is parsed for book links.
-    3. Wayback CDX index — passive: book pages archived by anyone;
+    4. Wayback CDX index — passive: book pages archived by anyone;
        new URLs and changed content digests.
-    4. www.tie.go.tz/news — always reachable; TIE announces new books.
+    5. www.tie.go.tz/news — TIE announces new books.
+
+  When the catalogue API answers, its verdict is authoritative and the
+  legacy paths only serve as backup (their alerts are suppressed).
 
 Configuration (GitHub repository secrets):
     WHATSAPP_PHONE     e.g. 255765793764
@@ -27,7 +35,6 @@ Configuration (GitHub repository secrets):
 State is kept in state.json (committed back to the repo after every run).
 """
 
-import concurrent.futures
 import hashlib
 import json
 import os
@@ -45,18 +52,16 @@ from datetime import datetime, timezone
 OL = os.environ.get("TIE_OL_BASE", "https://ol.tie.go.tz")
 WWW_NEWS = "https://www.tie.go.tz/news"
 
-BOOKS_PREFIX = "/uploaded_files/books/"        # the whole library lives here
+BOOKS_PREFIX = "/uploaded_files/books/"        # legacy static tree (2025 and earlier)
 
-# Possible public catalogue endpoints of the library API (probed when reachable).
-API_PROBES = [
-    "/api/",
-    "/api/books",
-    "/api/v1/books",
-    "/api/public/books",
-    "/api/books/public",
-    "/api/catalog",
-    "/api/library",
-]
+# Public catalogue of the (2026) React e-Library — PRIMARY signal.
+# GET {OL}/api/public/books?page=N&limit=100 → {data:{items:[...], total, totalPages}}
+# The server silently caps limit at 100. Items carry id, title, publishedAt,
+# fileUrl, classes, subjects, levels; ordering is newest-first.
+API_BOOKS = "/api/public/books"
+API_PAGE_LIMIT = 100
+API_MAX_PAGES = 20          # safety cap (20 × 100 = 2000 books)
+API_EMPTY_IS_FAILURE = True # an empty catalogue is treated as "unavailable"
 
 # Wayback CDX prefix covering every book file in the library.
 BOOK_CDX_PREFIX = "ol.tie.go.tz/uploaded_files/books*"
@@ -138,16 +143,6 @@ def http_get(url, timeout=30):
 
 def sha256_hex(data):
     return hashlib.sha256(data).hexdigest()
-
-
-def parallel_get(urls, timeout, workers=8):
-    """Fetch several URLs concurrently. Returns {url: R}."""
-    out = {}
-    with concurrent.futures.ThreadPoolExecutor(max_workers=workers) as ex:
-        futs = {ex.submit(http_get, u, timeout): u for u in urls}
-        for f in concurrent.futures.as_completed(futs):
-            out[futs[f]] = f.result()
-    return out
 
 
 # ------------------------------------------------------------------ Wayback
@@ -245,26 +240,6 @@ def pretty_book_name(root):
     return root.rstrip("/").rsplit("/", 1)[-1].replace("_", " ").replace("%20", " ").strip()
 
 
-def extract_book_urls(obj, out=None):
-    """Recursively pull uploaded_files/books/*.html URLs (and titles) from API JSON."""
-    if out is None:
-        out = {}
-    if isinstance(obj, dict):
-        title = obj.get("title") or obj.get("name") or obj.get("book_title")
-        for v in obj.values():
-            if isinstance(v, str) and "uploaded_files/books/" in v and v.lower().endswith((".html", ".htm")):
-                u = v.split("?")[0].split("#")[0]
-                if u.startswith("/"):
-                    u = OL + u           # absolutize relative API paths
-                out[u] = str(title or v.rsplit("/", 1)[-1])
-            else:
-                extract_book_urls(v, out)
-    elif isinstance(obj, list):
-        for v in obj:
-            extract_book_urls(v, out)
-    return out
-
-
 def sitemap_book_urls():
     """Fetch sitemap.xml (following one level of sitemap index). Book URLs only."""
     found, queue, seen = [], [OL + "/sitemap.xml"], set()
@@ -288,6 +263,67 @@ def sitemap_book_urls():
                     and urllib.parse.urlsplit(loc).netloc == urllib.parse.urlsplit(OL).netloc):
                 queue.append(loc)
     return sorted(set(found))
+
+
+def api_public_books():
+    """Enumerate the public catalogue API of the React e-Library (primary signal).
+
+    Returns (books, error):
+      books  {id: {id, title, publishedAt, fileUrl, classes, subjects, levels}}
+             — None when the API is unavailable/unhealthy (site down, partial
+             pagination, malformed response). Never raises.
+      error  short human-readable reason when books is None.
+    """
+    def _get_page(page):
+        url = f"{OL}{API_BOOKS}?page={page}&limit={API_PAGE_LIMIT}"
+        r = http_get(url, timeout=API_TIMEOUT)
+        if not r.ok or (r.body or b"")[:1] not in (b"{", b"["):
+            return None, f"page {page}: status={r.status} {(r.err or '')[:60]}"
+        try:
+            meta = (json.loads(r.body.decode("utf-8", "replace")) or {}).get("data") or {}
+        except Exception as e:
+            return None, f"page {page}: bad json ({e})"
+        return meta, None
+
+    meta, err = _get_page(1)
+    if err:
+        return None, err
+    total = meta.get("total") or 0
+    pages = int(meta.get("totalPages") or 1)
+    if pages > API_MAX_PAGES:
+        log(f"  ⚠️ catalogue reports {pages} pages (> {API_MAX_PAGES} cap) — "
+            "enumeration truncated")
+        pages = API_MAX_PAGES
+    items = list(meta.get("items") or [])
+    for p in range(2, pages + 1):
+        meta, err = _get_page(p)
+        if err:
+            return None, err            # partial enumeration = no verdict at all
+        items += meta.get("items") or []
+    if API_EMPTY_IS_FAILURE and not items:
+        return None, "catalogue reports zero books (treated as unavailable)"
+
+    books, seen = {}, set()
+    for it in items:
+        bid = (it or {}).get("id")
+        if not bid or bid in seen:
+            continue
+        seen.add(bid)
+        books[bid] = {
+            "id": bid,
+            "title": (it.get("title") or "").strip(),
+            "publishedAt": it.get("publishedAt"),
+            "fileUrl": it.get("fileUrl"),
+            "classes": sorted({c.get("name") for c in it.get("classes") or []
+                               if c.get("name")}),
+            "subjects": sorted({s.get("name") for s in it.get("subjects") or []
+                                if s.get("name")}),
+            "levels": sorted({l.get("name") for l in it.get("levels") or []
+                              if l.get("name")}),
+        }
+    if total and len(books) < total:
+        log(f"  ⚠️ catalogue total={total} but only {len(books)} books parsed")
+    return books, None
 
 
 def crawl_books_tree():
@@ -408,40 +444,39 @@ def main():
     # -------------------------------------------------- phase 1: direct contact
     log("── Phase 1: direct contact with ol.tie.go.tz")
     home = http_get(OL + "/", timeout=DIRECT_TIMEOUT)
-    ol_reachable = home.status is not None
-    enumerated = set()     # every book URL seen directly this run
+    home_ok = home.status is not None
+
+    # Phase 1b — public catalogue API (PRIMARY signal on the 2026 React site)
+    api_books, api_err = api_public_books()
+    api_ok = api_books is not None
+    if api_ok:
+        log(f"  📖 catalogue API: {len(api_books)} books listed")
+    else:
+        log(f"  ❌ catalogue API unavailable ({api_err})")
+
+    ol_reachable = home_ok or api_ok
+    enumerated = set()     # legacy static-tree book URLs seen directly this run
     crawl_dirs, crawl_root_ok = {}, False
 
     if ol_reachable:
-        log(f"  ✅ ol.tie.go.tz reachable (status={home.status})")
+        log("  ✅ ol.tie.go.tz reachable"
+            + (f" (homepage status={home.status})" if home_ok else " (via API)"))
         state["unreachable_since"] = None
         state["outage_alerted"] = False
 
-        log("  crawling the /uploaded_files/books/ tree ...")
-        crawl_dirs, crawl_files, crawl_root_ok = crawl_books_tree()
-        enumerated |= set(crawl_files)
-        log(f"  crawl: {len(crawl_dirs)} listing pages, {len(crawl_files)} "
-            f"book files, root_ok={crawl_root_ok}")
+        # legacy static-tree enumeration — inert on the React site, kept as a
+        # fallback in case TIE ever re-enables the old static hosting
+        if home_ok:
+            log("  crawling the /uploaded_files/books/ tree (legacy) ...")
+            crawl_dirs, crawl_files, crawl_root_ok = crawl_books_tree()
+            enumerated |= set(crawl_files)
+            log(f"  crawl: {len(crawl_dirs)} listing pages, {len(crawl_files)} "
+                f"book files, root_ok={crawl_root_ok}")
 
-        sm = sitemap_book_urls()
-        if sm:
-            enumerated |= set(sm)
-            log(f"  sitemap.xml: {len(sm)} book URLs")
-
-        cat_urls = {}
-        api = parallel_get([OL + p for p in API_PROBES], API_TIMEOUT)
-        for u, r in sorted(api.items()):
-            if r.status == 200 and r.body[:1] in (b"{", b"["):
-                try:
-                    data = json.loads(r.body.decode("utf-8", "replace"))
-                    found = extract_book_urls(data)
-                    if found:
-                        cat_urls.update(found)
-                except Exception:
-                    pass
-        if cat_urls:
-            enumerated |= set(cat_urls)
-            log(f"  catalogue API: {len(cat_urls)} book URLs")
+            sm = sitemap_book_urls()
+            if sm:
+                enumerated |= set(sm)
+                log(f"  sitemap.xml: {len(sm)} book URLs")
     else:
         log(f"  ❌ ol.tie.go.tz unreachable ({(home.err if home else '?')})")
         if not state.get("unreachable_since"):
@@ -488,6 +523,38 @@ def main():
         state["direct_dirs"] = {u: {"ok": i.get("ok"), "hash": i.get("hash"),
                                     "children": i.get("children")}
                                 for u, i in crawl_dirs.items()}
+
+    # ------------------------------- phase 1c: catalogue API diff (PRIMARY)
+    new_api, updated_api, removed_api = [], [], []
+    prev_api = state.get("api_books") or {}
+    if api_ok:
+        if not state.get("api_ever_ok"):
+            log(f"  catalogue API first success — recording baseline "
+                f"({len(api_books)} books, no alerts for existing ones)")
+        else:
+            new_ids = sorted(set(api_books) - set(prev_api))
+            gone_ids = sorted(set(prev_api) - set(api_books))
+            if gone_ids and len(gone_ids) > max(20, len(prev_api) // 4):
+                log(f"  {len(gone_ids)} books missing from the catalogue — "
+                    "looks like a partial response; removal alerts suppressed")
+                gone_ids = []
+            new_api = [api_books[i] for i in new_ids]
+            removed_api = [prev_api[i] for i in gone_ids]
+            updated_api = [b for i, b in sorted(api_books.items())
+                           if i in prev_api
+                           and (prev_api[i].get("publishedAt") != b.get("publishedAt")
+                                or prev_api[i].get("fileUrl") != b.get("fileUrl"))]
+            if new_api:
+                log(f"  🆕 new in catalogue: {len(new_api)}")
+                for b in new_api[:5]:
+                    log(f"     • {(b.get('title') or '?')[:70]}")
+            if updated_api:
+                log(f"  ♻️ re-published/updated: {len(updated_api)}")
+            if removed_api:
+                log(f"  🗑 no longer listed: {len(removed_api)}")
+        state["api_books"] = api_books
+        state["api_ever_ok"] = True
+        state["api_total"] = len(api_books)
 
     # -------------------------------------------------- phase 2: Wayback SPN
     spn_books = []
@@ -564,39 +631,76 @@ def main():
     # -------------------------------------------------- phase 5: analysis
     log("── Phase 5: analysis")
     if not first_run:
-        # new books — live catalogue / sitemap (exact)
-        if new_direct:
-            pretty = sorted({pretty_book_name(book_root(u)) for u in new_direct})
-            extra = "" if len(pretty) <= 6 else f"\n…and {len(pretty) - 6} more"
-            messages.append(
-                "📚 *New book(s) uploaded to the TIE e-Library:*\n• "
-                + "\n• ".join(pretty[:6]) + extra)
+        # new books — live catalogue API (PRIMARY, exact)
+        if new_api:
+            lines = []
+            for b in sorted(new_api,
+                            key=lambda x: x.get("publishedAt") or "",
+                            reverse=True)[:5]:
+                ctx = ", ".join(x for x in (", ".join(b.get("classes") or []),
+                                             ", ".join(b.get("subjects") or []))
+                                if x)
+                lines.append(f"• {b.get('title') or 'Untitled'}"
+                             + (f" ({ctx[:70]})" if ctx else "")
+                             + f"\n{OL}/book-detail/{b.get('id')}")
+            extra = "" if len(new_api) <= 5 else f"\n…and {len(new_api) - 5} more"
+            messages.append("📚 *New book(s) uploaded to the TIE e-Library:*\n"
+                            + "\n".join(lines) + extra)
 
-        # new books — Wayback index (passive)
-        if new_roots:
-            pretty = sorted(pretty_book_name(r) for r in new_roots)
-            extra = "" if len(pretty) <= 5 else f"\n…and {len(pretty) - 5} more"
-            messages.append(
-                "📚 *New book(s) detected in the TIE library* (via Wayback "
-                "index):\n• " + "\n• ".join(pretty[:5]) + extra)
-
-        # updated book files (same folder, changed content/listing)
-        updated_names = sorted({pretty_book_name(d.rstrip("/")) for d in updated_direct})
-        updated_names += sorted({pretty_book_name(book_root(u)) for u in updated_cdx})
-        if updated_names:
-            extra = "" if len(updated_names) <= 5 else f"\n…and {len(updated_names) - 5} more"
-            messages.append(
-                "📝 *Book file(s) updated on the TIE e-Library:*\n• "
-                + "\n• ".join(sorted(set(updated_names))[:5]) + extra)
-
-        # removed / renamed books
-        if removed_files or removed_dirs:
-            names = sorted({pretty_book_name(book_root(u)) for u in removed_files})
-            names += sorted(d.rstrip("/") for _, d in removed_dirs)
+        # re-published / updated books (catalogue API)
+        if updated_api:
+            names = sorted({(b.get("title") or "?") for b in updated_api})
             extra = "" if len(names) <= 5 else f"\n…and {len(names) - 5} more"
-            messages.append(
-                "⚠️ Book(s) no longer listed on the TIE e-Library (removed or "
-                "renamed):\n• " + "\n• ".join(names[:5]) + extra)
+            messages.append("♻️ *Book(s) re-published or updated on the TIE "
+                            "e-Library:*\n• " + "\n• ".join(names[:5]) + extra)
+
+        # books no longer listed (catalogue API)
+        if removed_api:
+            names = sorted({(b.get("title") or "?") for b in removed_api})
+            extra = "" if len(names) <= 5 else f"\n…and {len(names) - 5} more"
+            messages.append("⚠️ Book(s) no longer listed on the TIE e-Library "
+                            "(removed or archived):\n• "
+                            + "\n• ".join(names[:5]) + extra)
+
+        # ---- legacy signals: trusted only when the catalogue API is silent ----
+        if not api_ok:
+            # new books — legacy static tree / sitemap
+            if new_direct:
+                pretty = sorted({pretty_book_name(book_root(u)) for u in new_direct})
+                extra = "" if len(pretty) <= 6 else f"\n…and {len(pretty) - 6} more"
+                messages.append(
+                    "📚 *New book(s) uploaded to the TIE e-Library:*\n• "
+                    + "\n• ".join(pretty[:6]) + extra)
+
+            # new books — Wayback index (passive)
+            if new_roots:
+                pretty = sorted(pretty_book_name(r) for r in new_roots)
+                extra = "" if len(pretty) <= 5 else f"\n…and {len(pretty) - 5} more"
+                messages.append(
+                    "📚 *New book(s) detected in the TIE library* (via Wayback "
+                    "index):\n• " + "\n• ".join(pretty[:5]) + extra)
+
+            # updated book files (same folder, changed content/listing)
+            updated_names = sorted({pretty_book_name(d.rstrip("/")) for d in updated_direct})
+            updated_names += sorted({pretty_book_name(book_root(u)) for u in updated_cdx})
+            if updated_names:
+                extra = "" if len(updated_names) <= 5 else f"\n…and {len(updated_names) - 5} more"
+                messages.append(
+                    "📝 *Book file(s) updated on the TIE e-Library:*\n• "
+                    + "\n• ".join(sorted(set(updated_names))[:5]) + extra)
+
+            # removed / renamed books
+            if removed_files or removed_dirs:
+                names = sorted({pretty_book_name(book_root(u)) for u in removed_files})
+                names += sorted(d.rstrip("/") for _, d in removed_dirs)
+                extra = "" if len(names) <= 5 else f"\n…and {len(names) - 5} more"
+                messages.append(
+                    "⚠️ Book(s) no longer listed on the TIE e-Library (removed or "
+                    "renamed):\n• " + "\n• ".join(names[:5]) + extra)
+        elif (new_direct or new_roots or updated_direct
+              or removed_files or removed_dirs):
+            log("  legacy static-tree signals present but suppressed — "
+                "catalogue API is authoritative this run")
 
         for it in news_new[:3]:
             messages.append(f"📰 *TIE news* (may relate to books):\n{it['title']}\n{it['url']}")
@@ -626,15 +730,18 @@ def main():
         except Exception:
             pass
         if down_hours >= BACK_ONLINE_HOURS:
+            note = (f" {len(api_books)} books are currently in the catalogue."
+                    if api_ok else
+                    (f" {len(enumerated)} book files currently catalogued."
+                     if enumerated else ""))
             messages.append(
                 "ℹ️ The TIE e-Library is reachable again — live catalogue checks "
-                "resumed. "
-                + (f"{len(enumerated)} book files currently catalogued."
-                   if enumerated else ""))
+                f"resumed.{note}")
 
     # -------------------------------------------------- send / save state
     if messages:
         text = "🔔 *TIE Library update*\n\n" + "\n\n".join(messages)
+        log(f"sending WhatsApp ({len(text)} chars):\n{text[:1600]}")
         send_whatsapp(text[:1600])
     elif not first_run:
         log("no changes detected — no notification sent")
