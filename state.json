@@ -1,4 +1,4191 @@
 {
+  "api_books": {
+    "01166c26-8d9a-4be0-9b98-b90aa210b3a6": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/01166c26-8d9a-4be0-9b98-b90aa210b3a6/original/book.epub",
+      "id": "01166c26-8d9a-4be0-9b98-b90aa210b3a6",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-14T08:45:47.360Z",
+      "subjects": [
+        "Arabic"
+      ],
+      "title": "Arabic for Secondary Schools Student’s Book Form Three"
+    },
+    "0298d25e-7339-42de-8ccc-c6bbc495eb24": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/0298d25e-7339-42de-8ccc-c6bbc495eb24/original/book.epub",
+      "id": "0298d25e-7339-42de-8ccc-c6bbc495eb24",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Learn English"
+      ],
+      "title": "Learn English Pupil’s Book Standard Two (English Medium Schools)"
+    },
+    "038804bb-769e-42af-ae4e-0006432c0aad": {
+      "classes": [
+        "Darasa la Tatu"
+      ],
+      "fileUrl": "/content/epub/038804bb-769e-42af-ae4e-0006432c0aad/original/book.epub",
+      "id": "038804bb-769e-42af-ae4e-0006432c0aad",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T08:54:54.874Z",
+      "subjects": [
+        "Kichina"
+      ],
+      "title": "Kichina Kitabu cha Mwanafunzi Darasa la Tatu"
+    },
+    "0560bd6f-1e5a-4bc9-8bd2-d4a9dd034475": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/0560bd6f-1e5a-4bc9-8bd2-d4a9dd034475/original/book.epub",
+      "id": "0560bd6f-1e5a-4bc9-8bd2-d4a9dd034475",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-10T06:00:35.724Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "060a2b0d-6870-4030-bdbd-b806c1717562": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/060a2b0d-6870-4030-bdbd-b806c1717562/original/book.epub",
+      "id": "060a2b0d-6870-4030-bdbd-b806c1717562",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:58:34.909Z",
+      "subjects": [
+        "Housekeeping"
+      ],
+      "title": "Housekeeping for Secondary Schools Vocational Stream Student's Book Form Two"
+    },
+    "06b89c46-b8da-4da8-82f7-f5f3d7bcd961": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/06b89c46-b8da-4da8-82f7-f5f3d7bcd961/original/book.epub",
+      "id": "06b89c46-b8da-4da8-82f7-f5f3d7bcd961",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T12:31:23.599Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "06c9a2b0-a5bf-426b-a0dd-b16c20ebe0f0": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/06c9a2b0-a5bf-426b-a0dd-b16c20ebe0f0/original/book.epub",
+      "id": "06c9a2b0-a5bf-426b-a0dd-b16c20ebe0f0",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T18:22:10.801Z",
+      "subjects": [
+        "Art and Design"
+      ],
+      "title": "Art and Design for Secondary School Vocational Stream Student’s Book Form Two"
+    },
+    "093ded12-2a62-4169-b266-96ab1afd0186": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/093ded12-2a62-4169-b266-96ab1afd0186/original/book.epub",
+      "id": "093ded12-2a62-4169-b266-96ab1afd0186",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:12.354Z",
+      "subjects": [
+        "Technical Drawing"
+      ],
+      "title": "Technical Drawing for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "0a1050fa-731c-47bb-879b-171c43a02d3d": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/0a1050fa-731c-47bb-879b-171c43a02d3d/original/book.epub",
+      "id": "0a1050fa-731c-47bb-879b-171c43a02d3d",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-06T07:46:11.757Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "0b6e1a82-30b2-48b3-8e9b-94b20e24a765": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/0b6e1a82-30b2-48b3-8e9b-94b20e24a765/original/book.epub",
+      "id": "0b6e1a82-30b2-48b3-8e9b-94b20e24a765",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:44:18.355Z",
+      "subjects": [
+        "Arabic"
+      ],
+      "title": "Arabic for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "0b95cad1-3f9a-4dc5-a4da-87fffc607723": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/0b95cad1-3f9a-4dc5-a4da-87fffc607723/original/book.epub",
+      "id": "0b95cad1-3f9a-4dc5-a4da-87fffc607723",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Secondary Schools: Student’s Book Form One"
+    },
+    "0bae0a42-c7e3-4281-9792-bdcd36d61ee4": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/0bae0a42-c7e3-4281-9792-bdcd36d61ee4/original/book.epub",
+      "id": "0bae0a42-c7e3-4281-9792-bdcd36d61ee4",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Hisabati"
+      ],
+      "title": "Hisabati Kitabu cha Mwanafunzi  Darasa la Tano"
+    },
+    "0bfb6e30-96b1-405b-ae03-023141996d79": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/0bfb6e30-96b1-405b-ae03-023141996d79/original/book.epub",
+      "id": "0bfb6e30-96b1-405b-ae03-023141996d79",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:21.556Z",
+      "subjects": [
+        "Track Events"
+      ],
+      "title": "Track Events Performance For Vocational Secondary Schools Student's Book Form One"
+    },
+    "0eb40a86-fbb1-416b-af2e-479a34e544ed": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/0eb40a86-fbb1-416b-af2e-479a34e544ed/original/book.epub",
+      "id": "0eb40a86-fbb1-416b-af2e-479a34e544ed",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Sayansi"
+      ],
+      "title": "Sayansi Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "10507f92-351f-4bf5-8aa4-453393f272e6": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/10507f92-351f-4bf5-8aa4-453393f272e6/original/book.epub",
+      "id": "10507f92-351f-4bf5-8aa4-453393f272e6",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T11:56:21.593Z",
+      "subjects": [
+        "Music"
+      ],
+      "title": "Music for Advanced Secondary Schools Form Five"
+    },
+    "11e81add-9fa0-4841-81c8-6c557e9443fb": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/11e81add-9fa0-4841-81c8-6c557e9443fb/original/book.epub",
+      "id": "11e81add-9fa0-4841-81c8-6c557e9443fb",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Chinese"
+      ],
+      "title": "Chinese for Secondary Schools Student’s Book Form Three"
+    },
+    "144d98c4-e2a7-4994-821b-4bd24ed2ca81": {
+      "classes": [
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/144d98c4-e2a7-4994-821b-4bd24ed2ca81/original/book.epub",
+      "id": "144d98c4-e2a7-4994-821b-4bd24ed2ca81",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics Pupil’s Book Standard Three"
+    },
+    "14a5545b-7181-49d7-a3d3-8772fabea629": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/14a5545b-7181-49d7-a3d3-8772fabea629/original/book.epub",
+      "id": "14a5545b-7181-49d7-a3d3-8772fabea629",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:56:57.311Z",
+      "subjects": [
+        "Ngoma Performance"
+      ],
+      "title": "Ngoma for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "14b8f96c-6dc8-4550-a21a-1906442d7158": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/14b8f96c-6dc8-4550-a21a-1906442d7158/original/book.epub",
+      "id": "14b8f96c-6dc8-4550-a21a-1906442d7158",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:44:22.521Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Advanced Secondary Schools Studentʼs Book Form Six"
+    },
+    "1517f0d3-317b-4d28-a3a5-1acbaf1421cb": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/1517f0d3-317b-4d28-a3a5-1acbaf1421cb/original/book.epub",
+      "id": "1517f0d3-317b-4d28-a3a5-1acbaf1421cb",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T08:32:15.271Z",
+      "subjects": [
+        "Food and Beverage Services"
+      ],
+      "title": "Food and Beverage Services and Sales for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "15fe9f88-43c5-4331-bb79-81035957144e": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/15fe9f88-43c5-4331-bb79-81035957144e/original/book.epub",
+      "id": "15fe9f88-43c5-4331-bb79-81035957144e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T05:28:29.240Z",
+      "subjects": [
+        "Electronics Repair"
+      ],
+      "title": "Electronics Repair for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "16fa0bd9-2e5a-46ee-af78-4fbae6fcf9c5": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/16fa0bd9-2e5a-46ee-af78-4fbae6fcf9c5/original/book.epub",
+      "id": "16fa0bd9-2e5a-46ee-af78-4fbae6fcf9c5",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:46.275Z",
+      "subjects": [
+        "Music Performance"
+      ],
+      "title": "Music Performance For Vocational Secondary Schools Student’s Book Form One"
+    },
+    "171ea613-2bef-4474-96ea-2ca14fa1a0b1": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/171ea613-2bef-4474-96ea-2ca14fa1a0b1/original/book.epub",
+      "id": "171ea613-2bef-4474-96ea-2ca14fa1a0b1",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T06:41:08.776Z",
+      "subjects": [
+        "Graphic Design"
+      ],
+      "title": "Graphic Design for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "17f3e479-d3cc-47a6-9082-609328c0f171": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/17f3e479-d3cc-47a6-9082-609328c0f171/original/book.epub",
+      "id": "17f3e479-d3cc-47a6-9082-609328c0f171",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T17:12:29.397Z",
+      "subjects": [
+        "Agro Mechanics"
+      ],
+      "title": "Agro Mechanics for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "1854e7e1-4799-49cf-9538-3e4bc8f48f97": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/1854e7e1-4799-49cf-9538-3e4bc8f48f97/original/book.epub",
+      "id": "1854e7e1-4799-49cf-9538-3e4bc8f48f97",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Business Studies"
+      ],
+      "title": "Business Studies for Secondary Schools: Student’s Book Form Two"
+    },
+    "18bee8ad-49c3-4afd-859c-f68664d3d1b7": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/18bee8ad-49c3-4afd-859c-f68664d3d1b7/original/book.epub",
+      "id": "18bee8ad-49c3-4afd-859c-f68664d3d1b7",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:08.440Z",
+      "subjects": [
+        "Food and Beverage Services"
+      ],
+      "title": "Food and Beverage Service and Sales for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "1a3eb5c4-4019-48a3-b802-54bfe72b6de2": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/1a3eb5c4-4019-48a3-b802-54bfe72b6de2/original/book.epub",
+      "id": "1a3eb5c4-4019-48a3-b802-54bfe72b6de2",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T14:04:33.085Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Communiquons en Français 1 Méthode de Français Cinquième Année Enseignement Secondaire Livre de l’Élève"
+    },
+    "1acbf704-5869-46ce-8456-38963df8db98": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/1acbf704-5869-46ce-8456-38963df8db98/original/book.epub",
+      "id": "1acbf704-5869-46ce-8456-38963df8db98",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Learn English"
+      ],
+      "title": "Learn English Pupil’s Book Standard Two (Kiswahili Medium Schools)"
+    },
+    "1d133179-c6bf-47c6-92ed-404f5e475230": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/1d133179-c6bf-47c6-92ed-404f5e475230/original/book.epub",
+      "id": "1d133179-c6bf-47c6-92ed-404f5e475230",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T09:48:28.726Z",
+      "subjects": [
+        "Netball"
+      ],
+      "title": "Netball for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "1d90dba2-591b-47d6-b447-61a5617bf694": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/1d90dba2-591b-47d6-b447-61a5617bf694/original/book.epub",
+      "id": "1d90dba2-591b-47d6-b447-61a5617bf694",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T07:40:31.241Z",
+      "subjects": [
+        "Bible Knowledge"
+      ],
+      "title": "Bible Knowledge for Secondary Schools Student’s Book Form One"
+    },
+    "1dd3d04a-f91f-4626-aa8f-b1b22009a074": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/1dd3d04a-f91f-4626-aa8f-b1b22009a074/original/book.epub",
+      "id": "1dd3d04a-f91f-4626-aa8f-b1b22009a074",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T18:12:12.416Z",
+      "subjects": [
+        "Animal Health and Production"
+      ],
+      "title": "Animal Health and Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "1e76377d-1003-43dc-adc1-1fb465071c02": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/1e76377d-1003-43dc-adc1-1fb465071c02/original/book.epub",
+      "id": "1e76377d-1003-43dc-adc1-1fb465071c02",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-01T05:30:32.077Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Secondary Schools Student’s Book Form One"
+    },
+    "1ee656cb-e4d6-48fb-b9e1-696b504596f7": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/1ee656cb-e4d6-48fb-b9e1-696b504596f7/original/book.epub",
+      "id": "1ee656cb-e4d6-48fb-b9e1-696b504596f7",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T16:41:34.581Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "1ef18dcb-8e73-4183-88fa-1dc18173eb69": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/1ef18dcb-8e73-4183-88fa-1dc18173eb69/original/book.epub",
+      "id": "1ef18dcb-8e73-4183-88fa-1dc18173eb69",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-07T06:38:36.414Z",
+      "subjects": [
+        "Sanaa na Michezo"
+      ],
+      "title": "Sanaa na Michezo Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "1efb3c12-ae33-4ac8-8ad9-81c743e353f4": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/1efb3c12-ae33-4ac8-8ad9-81c743e353f4/original/book.epub",
+      "id": "1efb3c12-ae33-4ac8-8ad9-81c743e353f4",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T11:30:45.659Z",
+      "subjects": [
+        "Agriculture"
+      ],
+      "title": "Agriculture for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "1f61a05c-7066-4576-9543-75c31240d7b1": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/1f61a05c-7066-4576-9543-75c31240d7b1/original/book.epub",
+      "id": "1f61a05c-7066-4576-9543-75c31240d7b1",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T07:17:27.419Z",
+      "subjects": [
+        "History"
+      ],
+      "title": "History for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "1f7ae309-3c3d-4e63-9f69-5009634e58e2": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/1f7ae309-3c3d-4e63-9f69-5009634e58e2/original/book.epub",
+      "id": "1f7ae309-3c3d-4e63-9f69-5009634e58e2",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Food Production"
+      ],
+      "title": "Food Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "228c45c2-0da3-400d-800d-036c94e65345": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/228c45c2-0da3-400d-800d-036c94e65345/original/book.epub",
+      "id": "228c45c2-0da3-400d-800d-036c94e65345",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T06:23:37.018Z",
+      "subjects": [
+        "Arithmetic"
+      ],
+      "title": "Arithmetic Pupil’s Book Standard Two"
+    },
+    "2293ad6c-18fb-4c02-ade1-7ecdad2ed92e": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/2293ad6c-18fb-4c02-ade1-7ecdad2ed92e/original/book.epub",
+      "id": "2293ad6c-18fb-4c02-ade1-7ecdad2ed92e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T18:15:57.825Z",
+      "subjects": [
+        "Animal Health and Production"
+      ],
+      "title": "Animal Health and Production for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "23ed47da-35f6-4f13-8f8e-1442a005bab3": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/23ed47da-35f6-4f13-8f8e-1442a005bab3/original/book.epub",
+      "id": "23ed47da-35f6-4f13-8f8e-1442a005bab3",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:14.048Z",
+      "subjects": [
+        "Plumbing and Pipe Fittings"
+      ],
+      "title": "Plumbing and Pipe Fitting For Vocational Secondary Schools Form One"
+    },
+    "272dd46a-3fef-40af-bd27-feb879e6ee01": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/272dd46a-3fef-40af-bd27-feb879e6ee01/original/book.epub",
+      "id": "272dd46a-3fef-40af-bd27-feb879e6ee01",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:32.453Z",
+      "subjects": [
+        "Auto Electric"
+      ],
+      "title": "Auto-electric for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "27894241-dc85-4fa7-bcb1-6ef1947be7b3": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/27894241-dc85-4fa7-bcb1-6ef1947be7b3/original/book.epub",
+      "id": "27894241-dc85-4fa7-bcb1-6ef1947be7b3",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Electrical Installation"
+      ],
+      "title": "Electrical Installation for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "285e3237-8e2a-4458-b382-6ab338892a0d": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/285e3237-8e2a-4458-b382-6ab338892a0d/original/book.epub",
+      "id": "285e3237-8e2a-4458-b382-6ab338892a0d",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-02T10:21:57.475Z",
+      "subjects": [
+        "Physics"
+      ],
+      "title": "Physics for Secondary Schools Student’s Book Form Two"
+    },
+    "28ac5c98-a0a1-40dd-a667-f8e9a6e8bfa9": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/28ac5c98-a0a1-40dd-a667-f8e9a6e8bfa9/original/book.epub",
+      "id": "28ac5c98-a0a1-40dd-a667-f8e9a6e8bfa9",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-05T09:13:07.341Z",
+      "subjects": [
+        "Kichina"
+      ],
+      "title": "Kichina Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "29246e8b-2413-48a1-a84d-7541d8355aa2": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/29246e8b-2413-48a1-a84d-7541d8355aa2/original/book.epub",
+      "id": "29246e8b-2413-48a1-a84d-7541d8355aa2",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T10:53:32.574Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English Pupil’s Book Standard Four"
+    },
+    "29c6a93c-e7a6-4631-9366-d02e63980ef2": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/29c6a93c-e7a6-4631-9366-d02e63980ef2/original/book.epub",
+      "id": "29c6a93c-e7a6-4631-9366-d02e63980ef2",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:46.302Z",
+      "subjects": [
+        "Computer Applications"
+      ],
+      "title": "Computer Applications Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "29e314b7-c92a-496d-8988-ac0aaa66339f": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/29e314b7-c92a-496d-8988-ac0aaa66339f/original/book.epub",
+      "id": "29e314b7-c92a-496d-8988-ac0aaa66339f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "2a871b1d-974a-4e96-a00e-55023f9b6350": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/2a871b1d-974a-4e96-a00e-55023f9b6350/original/book.epub",
+      "id": "2a871b1d-974a-4e96-a00e-55023f9b6350",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:08:09.752Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Kidato cha Pili"
+    },
+    "2b896607-64e6-4bf7-99e9-0480bf18934f": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/2b896607-64e6-4bf7-99e9-0480bf18934f/original/book.epub",
+      "id": "2b896607-64e6-4bf7-99e9-0480bf18934f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Design Sewing and Cloth Technology"
+      ],
+      "title": "Design Sewing and Cloth Technology for Secondary Schools Vocational Stream Student’s Book"
+    },
+    "2c6ad559-36e0-40a2-80f1-d8d75988a6e8": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/2c6ad559-36e0-40a2-80f1-d8d75988a6e8/original/book.epub",
+      "id": "2c6ad559-36e0-40a2-80f1-d8d75988a6e8",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:08:16.638Z",
+      "subjects": [
+        "Geography"
+      ],
+      "title": "Geography for Secondary Schools Student’s Book Form Two"
+    },
+    "2c768878-b79f-4a26-bace-9abb7c3ec2ba": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/2c768878-b79f-4a26-bace-9abb7c3ec2ba/original/book.epub",
+      "id": "2c768878-b79f-4a26-bace-9abb7c3ec2ba",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:35.965Z",
+      "subjects": [
+        "Carpentry and Joinery"
+      ],
+      "title": "Carpentry and Joinery for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "2dc5f38d-e26f-4734-b253-7f85a1034be9": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/2dc5f38d-e26f-4734-b253-7f85a1034be9/original/book.epub",
+      "id": "2dc5f38d-e26f-4734-b253-7f85a1034be9",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:39.327Z",
+      "subjects": [
+        "Computer Programming"
+      ],
+      "title": "Computer Programming for Vocational Secondary Schools Student's Book Form One"
+    },
+    "2fe5d5e4-f26a-4f91-a1c2-e39c42e82e9e": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/2fe5d5e4-f26a-4f91-a1c2-e39c42e82e9e/original/book.epub",
+      "id": "2fe5d5e4-f26a-4f91-a1c2-e39c42e82e9e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Computer Applications"
+      ],
+      "title": "Computer Applications Secondary Schools Vocational Stream Student’s Book Form One"
+    },
+    "319b673f-c96a-4113-9b58-b309f44b9ee8": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/319b673f-c96a-4113-9b58-b309f44b9ee8/original/book.epub",
+      "id": "319b673f-c96a-4113-9b58-b309f44b9ee8",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:26.089Z",
+      "subjects": [
+        "Engineering Science"
+      ],
+      "title": "Engineering Science for Secondary Schools Vocational Stream, Student's Book Form One"
+    },
+    "343a5f34-0bdf-4896-a8fa-69ba51cd1800": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/343a5f34-0bdf-4896-a8fa-69ba51cd1800/original/book.epub",
+      "id": "343a5f34-0bdf-4896-a8fa-69ba51cd1800",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-10T06:02:59.993Z",
+      "subjects": [
+        "Food and Human Nutrition"
+      ],
+      "title": "Food and Human Nutrition for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "3469d537-9348-4302-bc1b-ded5b305a517": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/3469d537-9348-4302-bc1b-ded5b305a517/original/book.epub",
+      "id": "3469d537-9348-4302-bc1b-ded5b305a517",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-12T11:15:06.915Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Communiquons en Français 2 French for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "346ce9ab-63e1-4b6d-8033-f1bccf084363": {
+      "classes": [
+        "Darasa la Nne",
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/346ce9ab-63e1-4b6d-8033-f1bccf084363/original/book.epub",
+      "id": "346ce9ab-63e1-4b6d-8033-f1bccf084363",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T14:05:55.512Z",
+      "subjects": [
+        "Kiarabu"
+      ],
+      "title": "Kiarabu Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "34900885-8385-4e5b-884b-0cb53cfcb914": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/34900885-8385-4e5b-884b-0cb53cfcb914/original/book.epub",
+      "id": "34900885-8385-4e5b-884b-0cb53cfcb914",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T07:17:32.032Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili  Shule za Sekondari Kitabu cha Mwanafunzi Kidato cha Sita"
+    },
+    "34c1acc6-1bef-4251-bbc4-ba9abaa0110d": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/34c1acc6-1bef-4251-bbc4-ba9abaa0110d/original/book.epub",
+      "id": "34c1acc6-1bef-4251-bbc4-ba9abaa0110d",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T14:02:48.708Z",
+      "subjects": [
+        "Writing"
+      ],
+      "title": "Writing Pupil’s Book Standard Two"
+    },
+    "34cdebae-5098-41cd-90ec-9a723dcbd0b8": {
+      "classes": [
+        "Darasa la Nne",
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/34cdebae-5098-41cd-90ec-9a723dcbd0b8/original/book.epub",
+      "id": "34cdebae-5098-41cd-90ec-9a723dcbd0b8",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T10:53:59.121Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Bonjour les Amis ! Méthode de français Livre de l’élève 2"
+    },
+    "34da24b3-2eeb-4b14-a69d-7f44983675aa": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/34da24b3-2eeb-4b14-a69d-7f44983675aa/original/book.epub",
+      "id": "34da24b3-2eeb-4b14-a69d-7f44983675aa",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T12:07:36.769Z",
+      "subjects": [
+        "Ngoma Performance"
+      ],
+      "title": "Ngoma Performance for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "364fb21b-f0cb-4d87-a495-6d41dc3fb039": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/364fb21b-f0cb-4d87-a495-6d41dc3fb039/original/book.epub",
+      "id": "364fb21b-f0cb-4d87-a495-6d41dc3fb039",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T08:27:37.658Z",
+      "subjects": [
+        "Music"
+      ],
+      "title": "Music for Advanced Secondary Schools: Student’s Book Form Six"
+    },
+    "398a3b44-4f58-49a8-b86d-0395ce679a5b": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/398a3b44-4f58-49a8-b86d-0395ce679a5b/original/book.epub",
+      "id": "398a3b44-4f58-49a8-b86d-0395ce679a5b",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-07-30T18:50:42.232Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Secondary Schools Student’s Book Form Two"
+    },
+    "3beae934-eabd-4f48-9a6c-c00046a5d98b": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/3beae934-eabd-4f48-9a6c-c00046a5d98b/original/book.epub",
+      "id": "3beae934-eabd-4f48-9a6c-c00046a5d98b",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Arabic"
+      ],
+      "title": "اللغة العربية للمدارس الثانوية العامة كتاب الطالب الصف الثاني"
+    },
+    "3c392e3d-85bd-4cad-a564-457f5b644999": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/3c392e3d-85bd-4cad-a564-457f5b644999/original/book.epub",
+      "id": "3c392e3d-85bd-4cad-a564-457f5b644999",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-21T05:18:08.935Z",
+      "subjects": [
+        "Sports Studies"
+      ],
+      "title": "Sport Studies  for Advanced Secondary Schools for Student’s Book Form Six"
+    },
+    "3dd04f77-93e1-473c-a153-550ba0ebce37": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/3dd04f77-93e1-473c-a153-550ba0ebce37/original/book.epub",
+      "id": "3dd04f77-93e1-473c-a153-550ba0ebce37",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T13:15:33.530Z",
+      "subjects": [
+        "History"
+      ],
+      "title": "History for Secondary Schools Student’s Book Form One"
+    },
+    "3e771877-7feb-4239-ba9f-780203c1b70f": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/3e771877-7feb-4239-ba9f-780203c1b70f/original/book.epub",
+      "id": "3e771877-7feb-4239-ba9f-780203c1b70f",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T10:43:14.410Z",
+      "subjects": [
+        "Physics"
+      ],
+      "title": "Physics for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "3f7edacc-5e37-4801-acb2-4edb99136cb0": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/3f7edacc-5e37-4801-acb2-4edb99136cb0/original/book.epub",
+      "id": "3f7edacc-5e37-4801-acb2-4edb99136cb0",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-10T05:59:13.445Z",
+      "subjects": [
+        "Geography"
+      ],
+      "title": "Practical Geography for Advanced Secondary Schools Student’s Book Form Five and Six"
+    },
+    "3fcbca51-08d6-4690-9944-d8f00ddf3534": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/3fcbca51-08d6-4690-9944-d8f00ddf3534/original/book.epub",
+      "id": "3fcbca51-08d6-4690-9944-d8f00ddf3534",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T11:05:02.412Z",
+      "subjects": [
+        "Divinity"
+      ],
+      "title": "Divinity for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "3ffd58be-e4e2-4350-b2c1-7c8575164b80": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/3ffd58be-e4e2-4350-b2c1-7c8575164b80/original/book.epub",
+      "id": "3ffd58be-e4e2-4350-b2c1-7c8575164b80",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:03.984Z",
+      "subjects": [
+        "Agro Mechanics"
+      ],
+      "title": "Agro Mechanics for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "401ce1ea-1b99-471b-a4b4-8b5233cec5a5": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/401ce1ea-1b99-471b-a4b4-8b5233cec5a5/original/book.epub",
+      "id": "401ce1ea-1b99-471b-a4b4-8b5233cec5a5",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T16:33:55.405Z",
+      "subjects": [
+        "Agro Mechanics"
+      ],
+      "title": "Agro Mechanics for Secondary Schools Vocational Stream Student's book Form Three"
+    },
+    "42d58763-4546-485e-a7b6-90361cb6a6c4": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/42d58763-4546-485e-a7b6-90361cb6a6c4/original/book.epub",
+      "id": "42d58763-4546-485e-a7b6-90361cb6a6c4",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T11:30:56.268Z",
+      "subjects": [
+        "Arabic"
+      ],
+      "title": "Arabic for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "43921ec0-8670-4d29-9823-b756d6c1efab": {
+      "classes": [
+        "Form Five",
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/43921ec0-8670-4d29-9823-b756d6c1efab/original/book.epub",
+      "id": "43921ec0-8670-4d29-9823-b756d6c1efab",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Chemistry"
+      ],
+      "title": "Physical Chemistry for Advanced Secondary Schools Form Five and Six"
+    },
+    "44c49e61-ea95-4139-b998-2ba947d42daa": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/44c49e61-ea95-4139-b998-2ba947d42daa/original/book.epub",
+      "id": "44c49e61-ea95-4139-b998-2ba947d42daa",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Auto Body Repair"
+      ],
+      "title": "Auto Body Repair for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "45010e9a-3736-4079-8bfe-80d8b0689d25": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/45010e9a-3736-4079-8bfe-80d8b0689d25/original/book.epub",
+      "id": "45010e9a-3736-4079-8bfe-80d8b0689d25",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Auto Body Repair"
+      ],
+      "title": "Auto Body Repair for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "451d9d88-8a8a-41fb-9643-afe97bdaa234": {
+      "classes": [
+        "Form Five",
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/451d9d88-8a8a-41fb-9643-afe97bdaa234/original/book.epub",
+      "id": "451d9d88-8a8a-41fb-9643-afe97bdaa234",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T14:11:03.383Z",
+      "subjects": [
+        "Chemistry"
+      ],
+      "title": "Organic Chemistry for Advanced Secondary Schools, Form 5-6"
+    },
+    "45c4f9d1-98eb-4c14-bb7c-80e2bb84ad82": {
+      "classes": [
+        "Darasa la Nne"
+      ],
+      "fileUrl": "/content/epub/45c4f9d1-98eb-4c14-bb7c-80e2bb84ad82/original/book.epub",
+      "id": "45c4f9d1-98eb-4c14-bb7c-80e2bb84ad82",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T14:33:48.746Z",
+      "subjects": [
+        "Sanaa na Michezo"
+      ],
+      "title": "Sanaa na Michezo Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "45fc6749-0156-4720-8bee-4e9c88d9d8c8": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/45fc6749-0156-4720-8bee-4e9c88d9d8c8/original/book.epub",
+      "id": "45fc6749-0156-4720-8bee-4e9c88d9d8c8",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Utamaduni, Sanaa na Michezo"
+      ],
+      "title": "Utamaduni, Sanaa  na Michezo Kitabu cha Mwanafunzi Darasa la Kwanza"
+    },
+    "4665922a-fcdd-426f-bc9c-e38b6061d98b": {
+      "classes": [
+        "Standard Five"
+      ],
+      "fileUrl": "/content/epub/4665922a-fcdd-426f-bc9c-e38b6061d98b/original/book.epub",
+      "id": "4665922a-fcdd-426f-bc9c-e38b6061d98b",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-06T06:35:03.589Z",
+      "subjects": [
+        "Geography and the Environment"
+      ],
+      "title": "Geography and  the Environment Pupil’s Book Standard Five"
+    },
+    "46932fd7-f797-4dd1-a07e-afd11b99e97f": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/46932fd7-f797-4dd1-a07e-afd11b99e97f/original/book.epub",
+      "id": "46932fd7-f797-4dd1-a07e-afd11b99e97f",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T13:15:40.966Z",
+      "subjects": [
+        "Sports Studies"
+      ],
+      "title": "Sport Studies for Secondary Schools Student's Book Form One"
+    },
+    "46d22ad5-ca63-4c06-8257-0221b57812d6": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/46d22ad5-ca63-4c06-8257-0221b57812d6/original/book.epub",
+      "id": "46d22ad5-ca63-4c06-8257-0221b57812d6",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Electrical Installation"
+      ],
+      "title": "Electrical Installation for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "47055d46-2b4e-4db3-9bff-ac47d41708bc": {
+      "classes": [
+        "Darasa la Tatu"
+      ],
+      "fileUrl": "/content/epub/47055d46-2b4e-4db3-9bff-ac47d41708bc/original/book.epub",
+      "id": "47055d46-2b4e-4db3-9bff-ac47d41708bc",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T09:58:25.075Z",
+      "subjects": [
+        "Sayansi"
+      ],
+      "title": "Sayansi Kitabu cha Mwanafunzi Darasa la Tatu"
+    },
+    "4781985b-cb6b-49f1-8176-e425659b7d3b": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/4781985b-cb6b-49f1-8176-e425659b7d3b/original/book.epub",
+      "id": "4781985b-cb6b-49f1-8176-e425659b7d3b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:17.485Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Secondary Schools Vocational Stream Form One Student’s Book"
+    },
+    "48372cd3-f8a4-462d-bb07-17093f76412d": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/48372cd3-f8a4-462d-bb07-17093f76412d/original/book.epub",
+      "id": "48372cd3-f8a4-462d-bb07-17093f76412d",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T14:10:21.607Z",
+      "subjects": [
+        "Textiles and Garment Construction"
+      ],
+      "title": "Textiles and Garment Construction for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "48f9c671-10d0-43b5-b5a9-9dc2d295ec6b": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/48f9c671-10d0-43b5-b5a9-9dc2d295ec6b/original/book.epub",
+      "id": "48f9c671-10d0-43b5-b5a9-9dc2d295ec6b",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T11:31:25.597Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "4adaf274-dfa0-4fb7-9b6b-71b766ab63be": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/4adaf274-dfa0-4fb7-9b6b-71b766ab63be/original/book.epub",
+      "id": "4adaf274-dfa0-4fb7-9b6b-71b766ab63be",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:39:18.094Z",
+      "subjects": [
+        "Engineering Science"
+      ],
+      "title": "Engineering Science for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "4b49456c-80a7-422d-b978-eec008012976": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/4b49456c-80a7-422d-b978-eec008012976/original/book.epub",
+      "id": "4b49456c-80a7-422d-b978-eec008012976",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-14T08:45:56.025Z",
+      "subjects": [
+        "Textiles and Garment Construction"
+      ],
+      "title": "Textiles and Garment Construction for Secondary Schools Student’s Book Form Two"
+    },
+    "4b796983-f4e6-4bb2-9258-b882042a4866": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/4b796983-f4e6-4bb2-9258-b882042a4866/original/book.epub",
+      "id": "4b796983-f4e6-4bb2-9258-b882042a4866",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-01T05:31:07.251Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "4b9c7dc7-30a4-4935-8ffd-c4ff0e4aad9a": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/4b9c7dc7-30a4-4935-8ffd-c4ff0e4aad9a/original/book.epub",
+      "id": "4b9c7dc7-30a4-4935-8ffd-c4ff0e4aad9a",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:27:36.154Z",
+      "subjects": [
+        "Electronics Repair"
+      ],
+      "title": "Electronics Repair  for  Vocational Secondary Schools  Student's Book  Form One"
+    },
+    "4bcaf1ac-4980-438e-be52-fc15554d15ad": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/4bcaf1ac-4980-438e-be52-fc15554d15ad/original/book.epub",
+      "id": "4bcaf1ac-4980-438e-be52-fc15554d15ad",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T07:21:19.790Z",
+      "subjects": [
+        "Afya na Mazingira"
+      ],
+      "title": "Afya na Mazingira  Kitabu cha Mwanafunzi Darasa la Kwanza"
+    },
+    "4bdcf6e4-96dd-4795-9812-9b2f258cf370": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/4bdcf6e4-96dd-4795-9812-9b2f258cf370/original/book.epub",
+      "id": "4bdcf6e4-96dd-4795-9812-9b2f258cf370",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T09:51:58.033Z",
+      "subjects": [
+        "Chemistry"
+      ],
+      "title": "Chemistry for Secondary Schools: Student’s Book Form One"
+    },
+    "4c33b508-e3b0-4d4b-950c-5218ba6b97e1": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/4c33b508-e3b0-4d4b-950c-5218ba6b97e1/original/book.epub",
+      "id": "4c33b508-e3b0-4d4b-950c-5218ba6b97e1",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Theatre Arts"
+      ],
+      "title": "Theatre Arts for Secondary Schools Student’s Book Form Two"
+    },
+    "4c5ee5c7-b672-4cbb-be80-f7cc5741ec9e": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/4c5ee5c7-b672-4cbb-be80-f7cc5741ec9e/original/book.epub",
+      "id": "4c5ee5c7-b672-4cbb-be80-f7cc5741ec9e",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T10:35:49.967Z",
+      "subjects": [
+        "Kusoma"
+      ],
+      "title": "Kusoma Kitabu cha Mwanafunzi Darasa la Pili (English Medium Schools)"
+    },
+    "4c87b649-9463-477c-87b6-e5dab7100f1f": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/4c87b649-9463-477c-87b6-e5dab7100f1f/original/book.epub",
+      "id": "4c87b649-9463-477c-87b6-e5dab7100f1f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:58:23.860Z",
+      "subjects": [
+        "Meat Processing Technology"
+      ],
+      "title": "Meat Processing Technology for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "4ee985a0-9800-4328-9af6-df08fb25968f": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/4ee985a0-9800-4328-9af6-df08fb25968f/original/book.epub",
+      "id": "4ee985a0-9800-4328-9af6-df08fb25968f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:04.901Z",
+      "subjects": [
+        "Food Production"
+      ],
+      "title": "Food Production for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "4f55d9a1-fc5a-42ca-b246-640fd6399e48": {
+      "classes": [
+        "Form Five",
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/4f55d9a1-fc5a-42ca-b246-640fd6399e48/original/book.epub",
+      "id": "4f55d9a1-fc5a-42ca-b246-640fd6399e48",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Basic Applied Mathematics"
+      ],
+      "title": "Basic Applied Mathematics for Advanced Secondary Schools Student’s Book Form Five and Six"
+    },
+    "4f6a91e7-8445-42b1-91a0-f8cc31db87e1": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/4f6a91e7-8445-42b1-91a0-f8cc31db87e1/original/book.epub",
+      "id": "4f6a91e7-8445-42b1-91a0-f8cc31db87e1",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T13:35:06.791Z",
+      "subjects": [
+        "Wood Processing"
+      ],
+      "title": "Wood Processing for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "5122ab6d-3ba9-4470-9cf5-23998621e470": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/5122ab6d-3ba9-4470-9cf5-23998621e470/original/book.epub",
+      "id": "5122ab6d-3ba9-4470-9cf5-23998621e470",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:24:02.222Z",
+      "subjects": [
+        "Meat Processing Technology"
+      ],
+      "title": "Meat Processing Technology for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "5193b2a7-98d8-4cac-8721-2fb877c76b4d": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/5193b2a7-98d8-4cac-8721-2fb877c76b4d/original/book.epub",
+      "id": "5193b2a7-98d8-4cac-8721-2fb877c76b4d",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:44:13.218Z",
+      "subjects": [
+        "Agriculture"
+      ],
+      "title": "Agriculture for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "529309c8-4695-4cd6-ba16-fb29a7f9c993": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/529309c8-4695-4cd6-ba16-fb29a7f9c993/original/book.epub",
+      "id": "529309c8-4695-4cd6-ba16-fb29a7f9c993",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Fine Art"
+      ],
+      "title": "Fine Art for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "52aed8be-6eee-4b01-b4ef-5c7ff3f24571": {
+      "classes": [
+        "Darasa la Nne"
+      ],
+      "fileUrl": "/content/epub/52aed8be-6eee-4b01-b4ef-5c7ff3f24571/original/book.epub",
+      "id": "52aed8be-6eee-4b01-b4ef-5c7ff3f24571",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Kichina"
+      ],
+      "title": "Kichina Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "53109750-e1a8-4188-92fc-f30afe34b530": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/53109750-e1a8-4188-92fc-f30afe34b530/original/book.epub",
+      "id": "53109750-e1a8-4188-92fc-f30afe34b530",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T12:31:28.792Z",
+      "subjects": [
+        "Geography and the Environment"
+      ],
+      "title": "Geography and the Environment pupil's book standard four"
+    },
+    "5454dff3-8159-44d2-8f1f-32d7695a44ce": {
+      "classes": [
+        "Darasa la Tatu"
+      ],
+      "fileUrl": "/content/epub/5454dff3-8159-44d2-8f1f-32d7695a44ce/original/book.epub",
+      "id": "5454dff3-8159-44d2-8f1f-32d7695a44ce",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Hisabati"
+      ],
+      "title": "Hisabati Darasa la Tatu Kitabu cha Mwanafunzi"
+    },
+    "5540d243-5dac-4802-90e3-3569f3284608": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/5540d243-5dac-4802-90e3-3569f3284608/original/book.epub",
+      "id": "5540d243-5dac-4802-90e3-3569f3284608",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Food and Human Nutrition"
+      ],
+      "title": "Food and Human Nutrition for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "55e56d0f-0ac4-4e9d-a6fa-34cf819d9ed1": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/55e56d0f-0ac4-4e9d-a6fa-34cf819d9ed1/original/book.epub",
+      "id": "55e56d0f-0ac4-4e9d-a6fa-34cf819d9ed1",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Netball"
+      ],
+      "title": "Netball Performance for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "55f963d8-8a06-4373-8a2c-3f58cea8fe8b": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/55f963d8-8a06-4373-8a2c-3f58cea8fe8b/original/book.epub",
+      "id": "55f963d8-8a06-4373-8a2c-3f58cea8fe8b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Carpentry and Joinery"
+      ],
+      "title": "Carpentry and Joinery with Metal Works for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "5707df5b-4eec-4c53-ac48-c8665612c080": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/5707df5b-4eec-4c53-ac48-c8665612c080/original/book.epub",
+      "id": "5707df5b-4eec-4c53-ac48-c8665612c080",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:09:12.255Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English for Secondary Schools Student’s Book Form Two"
+    },
+    "57416487-0d93-4eb1-a165-6795bdaac858": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/57416487-0d93-4eb1-a165-6795bdaac858/original/book.epub",
+      "id": "57416487-0d93-4eb1-a165-6795bdaac858",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-07-30T16:21:20.186Z",
+      "subjects": [
+        "Agriculture"
+      ],
+      "title": "Agriculture for Secondary Schools Student’s Book Form Two"
+    },
+    "57b9d4c4-38af-4d53-bd12-e047287fa267": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/57b9d4c4-38af-4d53-bd12-e047287fa267/original/book.epub",
+      "id": "57b9d4c4-38af-4d53-bd12-e047287fa267",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:58:28.524Z",
+      "subjects": [
+        "Masonry and Bricklaying"
+      ],
+      "title": "Masonry and Bricklaying for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "59567bda-e80d-47b2-83ed-75edae0f1e75": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/59567bda-e80d-47b2-83ed-75edae0f1e75/original/book.epub",
+      "id": "59567bda-e80d-47b2-83ed-75edae0f1e75",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Ngoma Performance"
+      ],
+      "title": "Ngoma Performance for   Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "59a1f118-0b7f-4a45-aadd-f608dd764dcc": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/59a1f118-0b7f-4a45-aadd-f608dd764dcc/original/book.epub",
+      "id": "59a1f118-0b7f-4a45-aadd-f608dd764dcc",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:41:56.123Z",
+      "subjects": [
+        "Motor Vehicle Mechanics"
+      ],
+      "title": "Motor Vehicle Mechanics for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "59a71745-0510-4496-9e4f-eaf343ad2de5": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/59a71745-0510-4496-9e4f-eaf343ad2de5/original/book.epub",
+      "id": "59a71745-0510-4496-9e4f-eaf343ad2de5",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Theatre Arts"
+      ],
+      "title": "Theatre Arts for Secondary Schools Student’s Book Form One"
+    },
+    "5ab0ad42-6a62-4ee7-b04a-dde9ec175e36": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/5ab0ad42-6a62-4ee7-b04a-dde9ec175e36/original/book.epub",
+      "id": "5ab0ad42-6a62-4ee7-b04a-dde9ec175e36",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T10:01:31.861Z",
+      "subjects": [
+        "Tour Guiding"
+      ],
+      "title": "Tour Guiding for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "5f25b10c-80b9-458b-a4cd-aaba0dcc31ce": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/5f25b10c-80b9-458b-a4cd-aaba0dcc31ce/original/book.epub",
+      "id": "5f25b10c-80b9-458b-a4cd-aaba0dcc31ce",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T10:24:11.799Z",
+      "subjects": [
+        "Food and Human Nutrition"
+      ],
+      "title": "Food and Human Nutrition for Secondary Schools Student’s Book Form One"
+    },
+    "60362460-b39b-48d9-9f25-577d29d2cfe1": {
+      "classes": [
+        "Darasa la Tatu",
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/60362460-b39b-48d9-9f25-577d29d2cfe1/original/book.epub",
+      "id": "60362460-b39b-48d9-9f25-577d29d2cfe1",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T08:55:22.281Z",
+      "subjects": [
+        "Kiarabu"
+      ],
+      "title": "Kiarabu Kitabu cha Mwanafunzi Darasa la Tatu"
+    },
+    "62fc4ce0-3fbd-4b60-8a79-f808bc0eac59": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/62fc4ce0-3fbd-4b60-8a79-f808bc0eac59/original/book.epub",
+      "id": "62fc4ce0-3fbd-4b60-8a79-f808bc0eac59",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-31T13:47:57.097Z",
+      "subjects": [
+        "Masonry and Bricklaying"
+      ],
+      "title": "Masonry and Bricklaying for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "63799b2d-c518-4728-801a-528a2b36330c": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/63799b2d-c518-4728-801a-528a2b36330c/original/book.epub",
+      "id": "63799b2d-c518-4728-801a-528a2b36330c",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:58:19.627Z",
+      "subjects": [
+        "Motor Vehicle Mechanics"
+      ],
+      "title": "Motor Vehicle Mechanics for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "6412241b-c299-41b6-acba-2cb0b28c6a49": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/6412241b-c299-41b6-acba-2cb0b28c6a49/original/book.epub",
+      "id": "6412241b-c299-41b6-acba-2cb0b28c6a49",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T13:15:27.378Z",
+      "subjects": [
+        "Geography"
+      ],
+      "title": "Geography for Secondary Schools Student’s Book Form One"
+    },
+    "64bd0009-231c-4392-af5c-d14d4401f6f8": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/64bd0009-231c-4392-af5c-d14d4401f6f8/original/book.epub",
+      "id": "64bd0009-231c-4392-af5c-d14d4401f6f8",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T10:43:02.424Z",
+      "subjects": [
+        "Theatre Arts"
+      ],
+      "title": "Theatre Arts for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "66716791-f666-4246-a860-adb7068140e4": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/66716791-f666-4246-a860-adb7068140e4/original/book.epub",
+      "id": "66716791-f666-4246-a860-adb7068140e4",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Hisabati Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "6789a0ae-f969-448b-b183-951bd7c2f9f0": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/6789a0ae-f969-448b-b183-951bd7c2f9f0/original/book.epub",
+      "id": "6789a0ae-f969-448b-b183-951bd7c2f9f0",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Music and Sound Technology"
+      ],
+      "title": "Music and Sound Technology for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "679f48df-c23e-4dbf-a03c-5d58fc8cd454": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/679f48df-c23e-4dbf-a03c-5d58fc8cd454/original/book.epub",
+      "id": "679f48df-c23e-4dbf-a03c-5d58fc8cd454",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T13:29:57.419Z",
+      "subjects": [
+        "Health and Environment"
+      ],
+      "title": "Health and Environment Pupil’s Book Standard One"
+    },
+    "67c5da7f-d5a7-47fc-a179-3eb7d73c011b": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/67c5da7f-d5a7-47fc-a179-3eb7d73c011b/original/book.epub",
+      "id": "67c5da7f-d5a7-47fc-a179-3eb7d73c011b",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Secondary Schools Student’s Book Form Two"
+    },
+    "6b616876-ac7f-4c38-a3a9-be08d62541d0": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/6b616876-ac7f-4c38-a3a9-be08d62541d0/original/book.epub",
+      "id": "6b616876-ac7f-4c38-a3a9-be08d62541d0",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Football Performance"
+      ],
+      "title": "Football Performance For Vocational Secondary Schools Student’s Book Form One"
+    },
+    "6b6b37dc-f244-450a-84a7-7f9266250f7a": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/6b6b37dc-f244-450a-84a7-7f9266250f7a/original/book.epub",
+      "id": "6b6b37dc-f244-450a-84a7-7f9266250f7a",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T09:14:04.209Z",
+      "subjects": [
+        "Music Performance"
+      ],
+      "title": "Music Performance for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "6b6d08a2-8f7d-4d94-bc87-4d83445b0121": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/6b6d08a2-8f7d-4d94-bc87-4d83445b0121/original/book.epub",
+      "id": "6b6d08a2-8f7d-4d94-bc87-4d83445b0121",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T09:58:48.540Z",
+      "subjects": [
+        "Kuhesabu"
+      ],
+      "title": "Kuhesabu Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "6b87bd55-d356-4c6b-97ba-5912e7b83515": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/6b87bd55-d356-4c6b-97ba-5912e7b83515/original/book.epub",
+      "id": "6b87bd55-d356-4c6b-97ba-5912e7b83515",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-10T05:59:54.128Z",
+      "subjects": [
+        "Theatre Arts"
+      ],
+      "title": "Theatre Arts for Advanced Secondary Schools Form Five"
+    },
+    "6bf110a8-457b-4510-bb46-3b1859eaebc0": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/6bf110a8-457b-4510-bb46-3b1859eaebc0/original/book.epub",
+      "id": "6bf110a8-457b-4510-bb46-3b1859eaebc0",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T08:55:00.617Z",
+      "subjects": [
+        "Health and Environment"
+      ],
+      "title": "Health and Environment Pupil’s Book Standard Two"
+    },
+    "6cadab2b-1ebd-4ded-bf8f-e77f123b590f": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/6cadab2b-1ebd-4ded-bf8f-e77f123b590f/original/book.epub",
+      "id": "6cadab2b-1ebd-4ded-bf8f-e77f123b590f",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T07:40:46.154Z",
+      "subjects": [
+        "Agriculture"
+      ],
+      "title": "Agriculture for Secondary Schools Student’s Book Form One"
+    },
+    "6d6ee605-8a95-42d0-aa16-94812428bd65": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/6d6ee605-8a95-42d0-aa16-94812428bd65/original/book.epub",
+      "id": "6d6ee605-8a95-42d0-aa16-94812428bd65",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:25.016Z",
+      "subjects": [
+        "Welding and Metal Fabrication"
+      ],
+      "title": "Welding and Metal Fabrication for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "6fcb438c-9f24-44d1-9706-487e8d070707": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/6fcb438c-9f24-44d1-9706-487e8d070707/original/book.epub",
+      "id": "6fcb438c-9f24-44d1-9706-487e8d070707",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:06.233Z",
+      "subjects": [
+        "Painting and Signwriting"
+      ],
+      "title": "Painting and Signwriting for Vocational Secondary Schools Form One"
+    },
+    "6fffe84c-93e9-4991-8efe-813fe0c4e352": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/6fffe84c-93e9-4991-8efe-813fe0c4e352/original/book.epub",
+      "id": "6fffe84c-93e9-4991-8efe-813fe0c4e352",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:08:24.821Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Bonjour 2 ! Méthode de français Livre de l’élève pour la deuxième année"
+    },
+    "701e777c-7b62-484f-af39-6f57ccd70bed": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/701e777c-7b62-484f-af39-6f57ccd70bed/original/book.epub",
+      "id": "701e777c-7b62-484f-af39-6f57ccd70bed",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:08:36.810Z",
+      "subjects": [
+        "Meat Processing Technology"
+      ],
+      "title": "Meat Processing Technology for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "711fdfcc-392e-4a8f-94b7-a2f31d2f9bb6": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/711fdfcc-392e-4a8f-94b7-a2f31d2f9bb6/original/book.epub",
+      "id": "711fdfcc-392e-4a8f-94b7-a2f31d2f9bb6",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:44.182Z",
+      "subjects": [
+        "Civil Draughting"
+      ],
+      "title": "Civil Draughting for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "7192877b-d227-4f2d-b5cb-1ee65be5ed86": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/7192877b-d227-4f2d-b5cb-1ee65be5ed86/original/book.epub",
+      "id": "7192877b-d227-4f2d-b5cb-1ee65be5ed86",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Chemistry"
+      ],
+      "title": "Chemistry for Secondary Schools Student’s Book Form Two"
+    },
+    "72640db1-c86b-4bc3-ae59-ee03c0b14a7e": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/72640db1-c86b-4bc3-ae59-ee03c0b14a7e/original/book.epub",
+      "id": "72640db1-c86b-4bc3-ae59-ee03c0b14a7e",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-14T08:45:51.460Z",
+      "subjects": [
+        "Agriculture"
+      ],
+      "title": "Agriculture for Secondary Schools Student’s Book Form Three"
+    },
+    "72bf9d78-9b26-420c-b307-773fda65ccb6": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/72bf9d78-9b26-420c-b307-773fda65ccb6/original/book.epub",
+      "id": "72bf9d78-9b26-420c-b307-773fda65ccb6",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T14:04:18.132Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Fasihi ya Kiswahili Kitabu cha Mwanafunzi Kidato cha Tano"
+    },
+    "7304666a-9ff2-4988-92eb-0aee9a23edb3": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/7304666a-9ff2-4988-92eb-0aee9a23edb3/original/book.epub",
+      "id": "7304666a-9ff2-4988-92eb-0aee9a23edb3",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T14:04:06.038Z",
+      "subjects": [
+        "Divinity"
+      ],
+      "title": "Divinity for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "7359a5b6-c72d-4ade-99c4-75e1239fff44": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/7359a5b6-c72d-4ade-99c4-75e1239fff44/original/book.epub",
+      "id": "7359a5b6-c72d-4ade-99c4-75e1239fff44",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T07:40:16.512Z",
+      "subjects": [
+        "Business Studies"
+      ],
+      "title": "Business Studies for Secondary Schools Student’s Book Form One"
+    },
+    "73bd0a26-b818-4066-bb8c-eb2b9b29c279": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/73bd0a26-b818-4066-bb8c-eb2b9b29c279/original/book.epub",
+      "id": "73bd0a26-b818-4066-bb8c-eb2b9b29c279",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T10:38:56.703Z",
+      "subjects": [
+        "Painting and Signwriting"
+      ],
+      "title": "Painting and Signwriting for Secondary Schools  Vocational Stream Student’s Book Form Three"
+    },
+    "74407d25-9af3-4ea9-87d3-071b5599728e": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/74407d25-9af3-4ea9-87d3-071b5599728e/original/book.epub",
+      "id": "74407d25-9af3-4ea9-87d3-071b5599728e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Fitter Mechanics"
+      ],
+      "title": "Fitter Mechanics for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "75de3bb0-79ab-4402-a3a7-f8eba2218a92": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/75de3bb0-79ab-4402-a3a7-f8eba2218a92/original/book.epub",
+      "id": "75de3bb0-79ab-4402-a3a7-f8eba2218a92",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T10:49:05.660Z",
+      "subjects": [
+        "Arithmetic"
+      ],
+      "title": "Arithmetic Pupil’s Book Standard One"
+    },
+    "765a2f94-8811-4e48-8594-78f041c3588b": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/765a2f94-8811-4e48-8594-78f041c3588b/original/book.epub",
+      "id": "765a2f94-8811-4e48-8594-78f041c3588b",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T16:41:29.239Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Advanced Secondary Schools Form Six Student’s Book"
+    },
+    "7682afa5-37f0-414c-bf66-2acc01849eaf": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/7682afa5-37f0-414c-bf66-2acc01849eaf/original/book.epub",
+      "id": "7682afa5-37f0-414c-bf66-2acc01849eaf",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-31T13:47:51.294Z",
+      "subjects": [
+        "Masonry and Bricklaying"
+      ],
+      "title": "Masonry and Bricklaying for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "7929bf65-36e1-45c4-ad9f-84293a7420d7": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/7929bf65-36e1-45c4-ad9f-84293a7420d7/original/book.epub",
+      "id": "7929bf65-36e1-45c4-ad9f-84293a7420d7",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:19.478Z",
+      "subjects": [
+        "Auto Body Repair"
+      ],
+      "title": "Auto Body Repair for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "7b104833-8d60-4af2-a6c0-320e14020720": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/7b104833-8d60-4af2-a6c0-320e14020720/original/book.epub",
+      "id": "7b104833-8d60-4af2-a6c0-320e14020720",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:53.340Z",
+      "subjects": [
+        "Music and Sound Technology"
+      ],
+      "title": "MUSIC AND SOUND TECHNOLOGY For Vocational Secondary Schools Student’s Book Form One"
+    },
+    "7ce40b1c-2dab-46ad-afe4-18dca56d771d": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/7ce40b1c-2dab-46ad-afe4-18dca56d771d/original/book.epub",
+      "id": "7ce40b1c-2dab-46ad-afe4-18dca56d771d",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-06T10:08:21.799Z",
+      "subjects": [
+        "Kiarabu"
+      ],
+      "title": "Kiarabu Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "7cecf70f-1883-4528-a337-a44ff092a9cc": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/7cecf70f-1883-4528-a337-a44ff092a9cc/original/book.epub",
+      "id": "7cecf70f-1883-4528-a337-a44ff092a9cc",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-30T18:21:59.112Z",
+      "subjects": [
+        "Art and Design"
+      ],
+      "title": "Art and Design for Secondary School Vocational Stream Student’s Book Form Three"
+    },
+    "7dc0fb94-d21a-42a7-9e46-ab18f88ccc15": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/7dc0fb94-d21a-42a7-9e46-ab18f88ccc15/original/book.epub",
+      "id": "7dc0fb94-d21a-42a7-9e46-ab18f88ccc15",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-01T13:00:14.863Z",
+      "subjects": [
+        "Textiles and Garment Construction"
+      ],
+      "title": "Textiles and Garment Construction for Secondary Schools Student’s Book Form One"
+    },
+    "7e8e4e0c-632d-4252-96ae-50930df14544": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/7e8e4e0c-632d-4252-96ae-50930df14544/original/book.epub",
+      "id": "7e8e4e0c-632d-4252-96ae-50930df14544",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": null,
+      "subjects": [
+        "Fine Art"
+      ],
+      "title": "Fine Art for Secondary Schools Student’s Book Form One"
+    },
+    "7f968e5d-6e70-4a6b-89b5-426820be4a22": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/7f968e5d-6e70-4a6b-89b5-426820be4a22/original/book.epub",
+      "id": "7f968e5d-6e70-4a6b-89b5-426820be4a22",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-01T05:31:32.945Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Secondary Schools Student’s Book Form Three"
+    },
+    "816aa0e1-ee51-49ce-988c-49b7a97a093d": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/816aa0e1-ee51-49ce-988c-49b7a97a093d/original/book.epub",
+      "id": "816aa0e1-ee51-49ce-988c-49b7a97a093d",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:57:09.612Z",
+      "subjects": [
+        "Chinese"
+      ],
+      "title": "Chinese For Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "8208281d-1dd2-450a-b856-a597180537e2": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/8208281d-1dd2-450a-b856-a597180537e2/original/book.epub",
+      "id": "8208281d-1dd2-450a-b856-a597180537e2",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:44:27.744Z",
+      "subjects": [
+        "Business Studies"
+      ],
+      "title": "Business Studies for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "82eabf41-d3eb-42c3-bc88-16bb085c85f2": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/82eabf41-d3eb-42c3-bc88-16bb085c85f2/original/book.epub",
+      "id": "82eabf41-d3eb-42c3-bc88-16bb085c85f2",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T06:40:52.132Z",
+      "subjects": [
+        "Graphic Design"
+      ],
+      "title": "Graphic Design for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "87a2b7ee-bf0d-4da0-80b2-156efcb64db6": {
+      "classes": [
+        "Darasa la Nne"
+      ],
+      "fileUrl": "/content/epub/87a2b7ee-bf0d-4da0-80b2-156efcb64db6/original/book.epub",
+      "id": "87a2b7ee-bf0d-4da0-80b2-156efcb64db6",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Sayansi"
+      ],
+      "title": "Sayansi Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "883b1162-1e31-477a-a1ea-a929a61db8bc": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/883b1162-1e31-477a-a1ea-a929a61db8bc/original/book.epub",
+      "id": "883b1162-1e31-477a-a1ea-a929a61db8bc",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:58:45.189Z",
+      "subjects": [
+        "Housekeeping"
+      ],
+      "title": "Housekeeping for Secondary Schools Vocational Stream Student's Book Form Three"
+    },
+    "89c9eabf-d2df-4c9f-bf86-3f8fabcd5ae2": {
+      "classes": [
+        "Standard Two"
+      ],
+      "fileUrl": "/content/epub/89c9eabf-d2df-4c9f-bf86-3f8fabcd5ae2/original/book.epub",
+      "id": "89c9eabf-d2df-4c9f-bf86-3f8fabcd5ae2",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Culture, Art and Sports"
+      ],
+      "title": "Culture, Art and Sports Pupil’s Book Standard Two"
+    },
+    "8b358584-3e77-4e69-9734-0d1803f588bf": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/8b358584-3e77-4e69-9734-0d1803f588bf/original/book.epub",
+      "id": "8b358584-3e77-4e69-9734-0d1803f588bf",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-06T07:35:23.649Z",
+      "subjects": [
+        "Jiografia na Mazingira"
+      ],
+      "title": "Jiografia na Mazingira Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "8c700a21-1bdd-4146-b6ab-7449770a37fa": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/8c700a21-1bdd-4146-b6ab-7449770a37fa/original/book.epub",
+      "id": "8c700a21-1bdd-4146-b6ab-7449770a37fa",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:41.832Z",
+      "subjects": [
+        "Civil Draughting"
+      ],
+      "title": "Civil Draughting for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "8ce33361-1b9e-4003-9128-bb3722bd485b": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/8ce33361-1b9e-4003-9128-bb3722bd485b/original/book.epub",
+      "id": "8ce33361-1b9e-4003-9128-bb3722bd485b",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T07:17:37.054Z",
+      "subjects": [
+        "Literature"
+      ],
+      "title": "Literature in English for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "8d13ff93-1aea-4ba7-9cea-888c4977b962": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/8d13ff93-1aea-4ba7-9cea-888c4977b962/original/book.epub",
+      "id": "8d13ff93-1aea-4ba7-9cea-888c4977b962",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T12:24:22.857Z",
+      "subjects": [
+        "Chinese"
+      ],
+      "title": "Chinese For Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "8e7fe7f5-57a0-4b73-8597-bdd416f85ef7": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/8e7fe7f5-57a0-4b73-8597-bdd416f85ef7/original/book.epub",
+      "id": "8e7fe7f5-57a0-4b73-8597-bdd416f85ef7",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:22:39.880Z",
+      "subjects": [
+        "Horticulture Attendant"
+      ],
+      "title": "Horticulture Attendant for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "8ef26a61-0f00-4f04-9597-5542c7326f4b": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/8ef26a61-0f00-4f04-9597-5542c7326f4b/original/book.epub",
+      "id": "8ef26a61-0f00-4f04-9597-5542c7326f4b",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T14:04:12.478Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "9050c317-48af-4da2-a4e7-6cf4dee7b807": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/9050c317-48af-4da2-a4e7-6cf4dee7b807/original/book.epub",
+      "id": "9050c317-48af-4da2-a4e7-6cf4dee7b807",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-14T08:46:31.607Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili Shule za Sekondari Kitabu cha Mwanafunzi Kidato cha Pili"
+    },
+    "910ed450-e0af-44ce-8348-378500b120d5": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/910ed450-e0af-44ce-8348-378500b120d5/original/book.epub",
+      "id": "910ed450-e0af-44ce-8348-378500b120d5",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T16:41:39.107Z",
+      "subjects": [
+        "Macroeconomics"
+      ],
+      "title": "Macroeconomics for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "9126132c-2963-47b8-ad4f-2a6faa0a52b6": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/9126132c-2963-47b8-ad4f-2a6faa0a52b6/original/book.epub",
+      "id": "9126132c-2963-47b8-ad4f-2a6faa0a52b6",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T14:10:21.289Z",
+      "subjects": [
+        "Kusoma"
+      ],
+      "title": "Kusoma Kitabu cha Mwanafunzi Darasa la Kwanza (English Medium Schools)"
+    },
+    "9282d888-3abb-43f2-951d-e46f3ef95cae": {
+      "classes": [
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/9282d888-3abb-43f2-951d-e46f3ef95cae/original/book.epub",
+      "id": "9282d888-3abb-43f2-951d-e46f3ef95cae",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Arts and Sports"
+      ],
+      "title": "Arts and Sports Pupil’s Book Standard Three"
+    },
+    "934893a1-9a49-48e5-b8f6-77b3748c0852": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/934893a1-9a49-48e5-b8f6-77b3748c0852/original/book.epub",
+      "id": "934893a1-9a49-48e5-b8f6-77b3748c0852",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:58:35.406Z",
+      "subjects": [
+        "Fitter Machinist"
+      ],
+      "title": "Field Crop Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "943b1ba6-8bfc-4296-914d-ba1483455726": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/943b1ba6-8bfc-4296-914d-ba1483455726/original/book.epub",
+      "id": "943b1ba6-8bfc-4296-914d-ba1483455726",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T11:56:01.291Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "94a47b01-d42f-4c65-9468-d158fe1c8ca6": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/94a47b01-d42f-4c65-9468-d158fe1c8ca6/original/book.epub",
+      "id": "94a47b01-d42f-4c65-9468-d158fe1c8ca6",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Computer Science"
+      ],
+      "title": "Computer Science for Secondary Schools Student’s Book Form Two"
+    },
+    "9694f3fa-028d-4f46-807e-e24f6e7f2c4d": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/9694f3fa-028d-4f46-807e-e24f6e7f2c4d/original/book.epub",
+      "id": "9694f3fa-028d-4f46-807e-e24f6e7f2c4d",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Secondary Schools Student’s Book Form Three"
+    },
+    "97820ebd-e520-4259-9ab5-8dff8d319742": {
+      "classes": [
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/97820ebd-e520-4259-9ab5-8dff8d319742/original/book.epub",
+      "id": "97820ebd-e520-4259-9ab5-8dff8d319742",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Geography"
+      ],
+      "title": "Geography and the Environment Pupil’s Book"
+    },
+    "9793ddb9-cb77-44c1-a5fd-d00ce1fab4f9": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/9793ddb9-cb77-44c1-a5fd-d00ce1fab4f9/original/book.epub",
+      "id": "9793ddb9-cb77-44c1-a5fd-d00ce1fab4f9",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:59.561Z",
+      "subjects": [
+        "Acting"
+      ],
+      "title": "Acting for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "97c6df39-dd79-4dc9-bbdf-f2f1b8007ed2": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/97c6df39-dd79-4dc9-bbdf-f2f1b8007ed2/original/book.epub",
+      "id": "97c6df39-dd79-4dc9-bbdf-f2f1b8007ed2",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T06:58:25.650Z",
+      "subjects": [
+        "Field Crop Production"
+      ],
+      "title": "Field Crop Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "97fb09ae-d96a-4e97-a1ec-9cbb8ff7c818": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/97fb09ae-d96a-4e97-a1ec-9cbb8ff7c818/original/book.epub",
+      "id": "97fb09ae-d96a-4e97-a1ec-9cbb8ff7c818",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T14:35:41.231Z",
+      "subjects": [
+        "Bible Knowledge"
+      ],
+      "title": "Bible Knowledge for Secondary Schools Student’s Book Form Two"
+    },
+    "98aa39aa-8624-4b67-81a1-dc452cd9edf3": {
+      "classes": [
+        "Form Five",
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/98aa39aa-8624-4b67-81a1-dc452cd9edf3/original/book.epub",
+      "id": "98aa39aa-8624-4b67-81a1-dc452cd9edf3",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T11:31:15.819Z",
+      "subjects": [
+        "Basic Applied Mathematics"
+      ],
+      "title": "Basic Applied Mathematics for Advanced Secondary Schools Student’s Book Form Five and Six"
+    },
+    "99cfb692-8882-4039-b13a-855daca15239": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/99cfb692-8882-4039-b13a-855daca15239/original/book.epub",
+      "id": "99cfb692-8882-4039-b13a-855daca15239",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics Pupil's Book Standard Four"
+    },
+    "9afb8b26-9bf4-426f-a195-e3728e7b1f0f": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/9afb8b26-9bf4-426f-a195-e3728e7b1f0f/original/book.epub",
+      "id": "9afb8b26-9bf4-426f-a195-e3728e7b1f0f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:22:45.103Z",
+      "subjects": [
+        "Leather Goods and Footwear"
+      ],
+      "title": "Leather Goods and Footwear  For  Vocational Secondary Schools  Student's Book  Form One"
+    },
+    "9c982ad8-0f90-40ca-a28a-83fd5346f73e": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/9c982ad8-0f90-40ca-a28a-83fd5346f73e/original/book.epub",
+      "id": "9c982ad8-0f90-40ca-a28a-83fd5346f73e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:58:39.377Z",
+      "subjects": [
+        "Painting and Signwriting"
+      ],
+      "title": "Painting and Signwriting for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "9e25d35a-6073-4139-97f4-a63e0b462db4": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/9e25d35a-6073-4139-97f4-a63e0b462db4/original/book.epub",
+      "id": "9e25d35a-6073-4139-97f4-a63e0b462db4",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Business Studies"
+      ],
+      "title": "Business Studies for Secondary Schools: Student’s Book Form Three"
+    },
+    "9ec7ebd7-5e55-4f3b-81ad-fdaf81f3dd41": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/9ec7ebd7-5e55-4f3b-81ad-fdaf81f3dd41/original/book.epub",
+      "id": "9ec7ebd7-5e55-4f3b-81ad-fdaf81f3dd41",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Culture, Art and Sports"
+      ],
+      "title": "Culture, Art and Sports Pupil’s Book Standard One"
+    },
+    "9f1bf480-6c44-493c-987f-fee63895681b": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/9f1bf480-6c44-493c-987f-fee63895681b/original/book.epub",
+      "id": "9f1bf480-6c44-493c-987f-fee63895681b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T10:01:38.993Z",
+      "subjects": [
+        "Refrigeration and Air Conditioning"
+      ],
+      "title": "Refrigeration and Air Conditioning for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "9fb9e2bd-e9e5-4f9e-b10b-f359d33d4ebc": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/9fb9e2bd-e9e5-4f9e-b10b-f359d33d4ebc/original/book.epub",
+      "id": "9fb9e2bd-e9e5-4f9e-b10b-f359d33d4ebc",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Electrical Installation"
+      ],
+      "title": "Electrical Installation Student’s Book for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "a15f6c03-f6ab-4b91-b841-011b253d7d16": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/a15f6c03-f6ab-4b91-b841-011b253d7d16/original/book.epub",
+      "id": "a15f6c03-f6ab-4b91-b841-011b253d7d16",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T09:52:08.947Z",
+      "subjects": [
+        "Chinese"
+      ],
+      "title": "Chinese for Secondary Schools Student’s Book Form One"
+    },
+    "a1f0bbe8-8056-44b2-af10-71ba7d07c61e": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/a1f0bbe8-8056-44b2-af10-71ba7d07c61e/original/book.epub",
+      "id": "a1f0bbe8-8056-44b2-af10-71ba7d07c61e",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Refrigeration and Air Conditioning"
+      ],
+      "title": "Refrigeration and Air Conditioning For Vocational Secondary Schools Student’s Book Form One"
+    },
+    "a3a39018-7a3d-42b1-a531-59f6f078c94b": {
+      "classes": [
+        "Standard Five"
+      ],
+      "fileUrl": "/content/epub/a3a39018-7a3d-42b1-a531-59f6f078c94b/original/book.epub",
+      "id": "a3a39018-7a3d-42b1-a531-59f6f078c94b",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Science"
+      ],
+      "title": "Science Pupil’s Book Standard Five"
+    },
+    "a4452717-12cb-4c47-a84b-316d162833c0": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/a4452717-12cb-4c47-a84b-316d162833c0/original/book.epub",
+      "id": "a4452717-12cb-4c47-a84b-316d162833c0",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:07:58.157Z",
+      "subjects": [
+        "Music"
+      ],
+      "title": "Music for Secondary Schools Student’s Book Form Two"
+    },
+    "a5000dd1-65db-415a-b726-017f209f318b": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/a5000dd1-65db-415a-b726-017f209f318b/original/book.epub",
+      "id": "a5000dd1-65db-415a-b726-017f209f318b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:21.498Z",
+      "subjects": [
+        "Solar Power Installation"
+      ],
+      "title": "Solar Power Installation for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "a5148e7f-85fa-4682-920f-98920220b69a": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/a5148e7f-85fa-4682-920f-98920220b69a/original/book.epub",
+      "id": "a5148e7f-85fa-4682-920f-98920220b69a",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T10:53:54.015Z",
+      "subjects": [
+        "Kusoma"
+      ],
+      "title": "Kusoma Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "a687db50-2d3f-4a58-81db-fa4ec936e334": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/a687db50-2d3f-4a58-81db-fa4ec936e334/original/book.epub",
+      "id": "a687db50-2d3f-4a58-81db-fa4ec936e334",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:22:36.361Z",
+      "subjects": [
+        "Handloom Weaving"
+      ],
+      "title": "Handloom Weaving for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "a7870be4-1186-4ddd-81e0-ba744042b044": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/a7870be4-1186-4ddd-81e0-ba744042b044/original/book.epub",
+      "id": "a7870be4-1186-4ddd-81e0-ba744042b044",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Arts and Sports"
+      ],
+      "title": "Arts and Sports Pupil’s Book Standard Four"
+    },
+    "a7a9dfeb-36a0-4834-b8e4-41d4e1862d57": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/a7a9dfeb-36a0-4834-b8e4-41d4e1862d57/original/book.epub",
+      "id": "a7a9dfeb-36a0-4834-b8e4-41d4e1862d57",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-07-30T19:04:17.013Z",
+      "subjects": [
+        "Computer Science"
+      ],
+      "title": "Computer Science for Secondary Schools Student’s Book Form One"
+    },
+    "a869492b-4194-4305-b06c-fa3b8a8c46dd": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/a869492b-4194-4305-b06c-fa3b8a8c46dd/original/book.epub",
+      "id": "a869492b-4194-4305-b06c-fa3b8a8c46dd",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-17T10:43:06.488Z",
+      "subjects": [
+        "Textiles and Garment Construction"
+      ],
+      "title": "Textiles and Garment Construction for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "aa0f5a6b-4930-40c6-bfbd-02b83c5e8825": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/aa0f5a6b-4930-40c6-bfbd-02b83c5e8825/original/book.epub",
+      "id": "aa0f5a6b-4930-40c6-bfbd-02b83c5e8825",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T08:44:08.734Z",
+      "subjects": [
+        "Accountancy"
+      ],
+      "title": "Accountancy  for Advanced Secondary Schools  Student’s Book Form Six"
+    },
+    "aa2b3745-e531-463a-87f9-95284526d211": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/aa2b3745-e531-463a-87f9-95284526d211/original/book.epub",
+      "id": "aa2b3745-e531-463a-87f9-95284526d211",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Computer Programming"
+      ],
+      "title": "Computer Programming for Secondary Schools Vocational Stream Student's Book Form Three"
+    },
+    "ab9120d5-e8b1-41ea-975e-4527848f0d8e": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/ab9120d5-e8b1-41ea-975e-4527848f0d8e/original/book.epub",
+      "id": "ab9120d5-e8b1-41ea-975e-4527848f0d8e",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T14:08:01.415Z",
+      "subjects": [
+        "Kusoma"
+      ],
+      "title": "Kusoma Kitabu cha Mwanafunzi Darasa la Kwanza"
+    },
+    "accd4876-54f3-4850-b0bb-5085ce04fb12": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/accd4876-54f3-4850-b0bb-5085ce04fb12/original/book.epub",
+      "id": "accd4876-54f3-4850-b0bb-5085ce04fb12",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Housekeeping"
+      ],
+      "title": "Housekeeping for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "ae12d5a6-5f84-4498-a018-a3848229b2ec": {
+      "classes": [
+        "Darasa la Tatu"
+      ],
+      "fileUrl": "/content/epub/ae12d5a6-5f84-4498-a018-a3848229b2ec/original/book.epub",
+      "id": "ae12d5a6-5f84-4498-a018-a3848229b2ec",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T09:58:01.331Z",
+      "subjects": [
+        "Sanaa na Michezo"
+      ],
+      "title": "Sanaa na Michezo Kitabu cha Mwanafunzi Darasa la Tatu Taasisi"
+    },
+    "ae77f835-407b-4d96-8014-9a3155cd32ce": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/ae77f835-407b-4d96-8014-9a3155cd32ce/original/book.epub",
+      "id": "ae77f835-407b-4d96-8014-9a3155cd32ce",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-12T10:08:20.645Z",
+      "subjects": [
+        "Fasihi"
+      ],
+      "title": "Fasihi ya Kiswahili Shule za Sekondari Kitabu cha Mwanafunzi Kidato cha Sita"
+    },
+    "ae9d2a31-57cd-4076-b9a5-c93558b0deae": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/ae9d2a31-57cd-4076-b9a5-c93558b0deae/original/book.epub",
+      "id": "ae9d2a31-57cd-4076-b9a5-c93558b0deae",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-01T12:57:58.909Z",
+      "subjects": [
+        "Motorcycle Mechanics"
+      ],
+      "title": "Motorcycle Mechanics for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "aeaf7e31-90ae-4ef3-b835-3ff944436ed3": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/aeaf7e31-90ae-4ef3-b835-3ff944436ed3/original/book.epub",
+      "id": "aeaf7e31-90ae-4ef3-b835-3ff944436ed3",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T16:41:44.300Z",
+      "subjects": [
+        "Tour Guiding"
+      ],
+      "title": "Tour Guiding for Vocational Secondary Schools Student’s Compendium Form One"
+    },
+    "aff8149a-105a-430f-9554-5b8eb81099e0": {
+      "classes": [
+        "Darasa la Nne"
+      ],
+      "fileUrl": "/content/epub/aff8149a-105a-430f-9554-5b8eb81099e0/original/book.epub",
+      "id": "aff8149a-105a-430f-9554-5b8eb81099e0",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T14:05:59.024Z",
+      "subjects": [
+        "Jiografia na Mazingira"
+      ],
+      "title": "Jiografia na Mazingira Kitabu cha Mwanafunzi Darasa la 4"
+    },
+    "b20d84ac-b903-4f70-8296-66d0150d9d3f": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/b20d84ac-b903-4f70-8296-66d0150d9d3f/original/book.epub",
+      "id": "b20d84ac-b903-4f70-8296-66d0150d9d3f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:37:01.450Z",
+      "subjects": [
+        "Handloom Weaving"
+      ],
+      "title": "Handloom Weaving for Vocational Secondary Schools Student’s Book Form Three"
+    },
+    "b22a6a16-d3fa-4413-bd8a-27ebe49f9a4f": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/b22a6a16-d3fa-4413-bd8a-27ebe49f9a4f/original/book.epub",
+      "id": "b22a6a16-d3fa-4413-bd8a-27ebe49f9a4f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T13:35:10.303Z",
+      "subjects": [
+        "Welding and Metal Fabrication"
+      ],
+      "title": "Welding and Metal Fabrication for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "b25513e8-b33c-4458-8389-c9598f2cee42": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/b25513e8-b33c-4458-8389-c9598f2cee42/original/book.epub",
+      "id": "b25513e8-b33c-4458-8389-c9598f2cee42",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-01T12:59:33.733Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English for Secondary Schools Student’s Book Form Three"
+    },
+    "b2671981-c18b-44ad-9bca-831dd0b2a5d8": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/b2671981-c18b-44ad-9bca-831dd0b2a5d8/original/book.epub",
+      "id": "b2671981-c18b-44ad-9bca-831dd0b2a5d8",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Writing"
+      ],
+      "title": "Writing Pupil’s Book Standard One"
+    },
+    "b5353214-d6fa-41b6-828e-30988959745f": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/b5353214-d6fa-41b6-828e-30988959745f/original/book.epub",
+      "id": "b5353214-d6fa-41b6-828e-30988959745f",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T09:33:45.441Z",
+      "subjects": [
+        "Plumbing and Pipe Fittings"
+      ],
+      "title": "Plumbing and Pipe Fittings for Secondary Schools Vocational Stream Form Two Student’s Book"
+    },
+    "b714b723-ccb7-4d79-84f2-3f25f93fc62d": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/b714b723-ccb7-4d79-84f2-3f25f93fc62d/original/book.epub",
+      "id": "b714b723-ccb7-4d79-84f2-3f25f93fc62d",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:34.679Z",
+      "subjects": [
+        "Design Sewing and Cloth Technology"
+      ],
+      "title": "Design, Sewing and Cloth Technology For Vocational Secondary Schools Student’s Book Form One"
+    },
+    "b7500e08-ba8d-44db-842d-5cf902d0a20b": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/b7500e08-ba8d-44db-842d-5cf902d0a20b/original/book.epub",
+      "id": "b7500e08-ba8d-44db-842d-5cf902d0a20b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:13.431Z",
+      "subjects": [
+        "Fitter Machinist"
+      ],
+      "title": "Fitter Machinist for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "b7647192-b258-41dc-a79c-8981a6c2a62a": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/b7647192-b258-41dc-a79c-8981a6c2a62a/original/book.epub",
+      "id": "b7647192-b258-41dc-a79c-8981a6c2a62a",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:09.843Z",
+      "subjects": [
+        "Animal Health and Production"
+      ],
+      "title": "Animal Health and Production for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "ba019e2c-7d9d-45ab-ab50-1d414ddbc4c8": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/ba019e2c-7d9d-45ab-ab50-1d414ddbc4c8/original/book.epub",
+      "id": "ba019e2c-7d9d-45ab-ab50-1d414ddbc4c8",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T14:04:24.464Z",
+      "subjects": [
+        "Fine Art"
+      ],
+      "title": "Fine Art For Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "bcc626de-314c-47cf-8e7d-e8aae9667f18": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/bcc626de-314c-47cf-8e7d-e8aae9667f18/original/book.epub",
+      "id": "bcc626de-314c-47cf-8e7d-e8aae9667f18",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T13:15:23.754Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Bonjour 1 ! Méthode de français Livre de l’élève pour la première année Enseignement secondaire"
+    },
+    "bcf84144-e63d-41ac-8a46-a418ec805cb1": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/bcf84144-e63d-41ac-8a46-a418ec805cb1/original/book.epub",
+      "id": "bcf84144-e63d-41ac-8a46-a418ec805cb1",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-14T08:46:01.211Z",
+      "subjects": [
+        "Sports Studies"
+      ],
+      "title": "Sport Studies for Secondary Schools Student’s Book Form Two"
+    },
+    "bd60dc2a-a23d-45d7-8190-15149c1a2276": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/bd60dc2a-a23d-45d7-8190-15149c1a2276/original/book.epub",
+      "id": "bd60dc2a-a23d-45d7-8190-15149c1a2276",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:14.105Z",
+      "subjects": [
+        "Art and Design"
+      ],
+      "title": "Art & Design for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "be9ccdce-f571-47f3-a6b3-a676165b636d": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/be9ccdce-f571-47f3-a6b3-a676165b636d/original/book.epub",
+      "id": "be9ccdce-f571-47f3-a6b3-a676165b636d",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T06:11:59.527Z",
+      "subjects": [
+        "Afya na Mazingira"
+      ],
+      "title": "Afya na Mazingira Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "c1487687-6694-4013-9313-5b417d703d03": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/c1487687-6694-4013-9313-5b417d703d03/original/book.epub",
+      "id": "c1487687-6694-4013-9313-5b417d703d03",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T11:02:02.958Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "Literature in English for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "c2a3819d-0161-481e-9d64-284c0eb47755": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/c2a3819d-0161-481e-9d64-284c0eb47755/original/book.epub",
+      "id": "c2a3819d-0161-481e-9d64-284c0eb47755",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T14:35:54.955Z",
+      "subjects": [
+        "Chinese"
+      ],
+      "title": "Chinese for Secondary Schools Student’s Book Form Two"
+    },
+    "c63a75b5-aee0-4a81-8dcf-686a7c5bf6ce": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/c63a75b5-aee0-4a81-8dcf-686a7c5bf6ce/original/book.epub",
+      "id": "c63a75b5-aee0-4a81-8dcf-686a7c5bf6ce",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T09:57:39.955Z",
+      "subjects": [
+        "Kuandika"
+      ],
+      "title": "Kuandika Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "c68150ee-3e6e-40a3-ab1b-316f1ab2f12d": {
+      "classes": [
+        "Darasa la Pili"
+      ],
+      "fileUrl": "/content/epub/c68150ee-3e6e-40a3-ab1b-316f1ab2f12d/original/book.epub",
+      "id": "c68150ee-3e6e-40a3-ab1b-316f1ab2f12d",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Utamaduni, Sanaa na Michezo"
+      ],
+      "title": "Utamaduni, Sanaa  na Michezo Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "c87db28b-ee37-4848-829d-ea0c960cf6e9": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/c87db28b-ee37-4848-829d-ea0c960cf6e9/original/book.epub",
+      "id": "c87db28b-ee37-4848-829d-ea0c960cf6e9",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Music"
+      ],
+      "title": "Music for Secondary Schools Student’s Book Form One"
+    },
+    "ca11dfdd-e559-44e9-9183-dd14c9cc1524": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/ca11dfdd-e559-44e9-9183-dd14c9cc1524/original/book.epub",
+      "id": "ca11dfdd-e559-44e9-9183-dd14c9cc1524",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "History"
+      ],
+      "title": "History for Secondary Schools Student’s Book Form Two"
+    },
+    "cbea95cb-f8ec-4c13-b116-e18317c177da": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/cbea95cb-f8ec-4c13-b116-e18317c177da/original/book.epub",
+      "id": "cbea95cb-f8ec-4c13-b116-e18317c177da",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T08:32:21.620Z",
+      "subjects": [
+        "Front Office Operations"
+      ],
+      "title": "Front Office Operations for Secondary Schools Vocational Stream Form Three"
+    },
+    "cc9e26f8-98a4-41b8-b4c0-b78b7bcefa18": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/cc9e26f8-98a4-41b8-b4c0-b78b7bcefa18/original/book.epub",
+      "id": "cc9e26f8-98a4-41b8-b4c0-b78b7bcefa18",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T13:15:30.619Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Kidato cha Kwanza"
+    },
+    "ccac4bcd-2983-40bd-bb14-1a1ed8e084ad": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/ccac4bcd-2983-40bd-bb14-1a1ed8e084ad/original/book.epub",
+      "id": "ccac4bcd-2983-40bd-bb14-1a1ed8e084ad",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T12:12:05.600Z",
+      "subjects": [
+        "Track Events"
+      ],
+      "title": "Track Events for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "cce966de-501b-472a-8e46-43788f06e717": {
+      "classes": [
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/cce966de-501b-472a-8e46-43788f06e717/original/book.epub",
+      "id": "cce966de-501b-472a-8e46-43788f06e717",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T09:28:25.967Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili Kitabu cha Mwanafunzi Darasa la Tatu"
+    },
+    "cd6457a5-73f3-4353-b4a0-33267732f641": {
+      "classes": [
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/cd6457a5-73f3-4353-b4a0-33267732f641/original/book.epub",
+      "id": "cd6457a5-73f3-4353-b4a0-33267732f641",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Science"
+      ],
+      "title": "Science Pupil’s Book Standard Four"
+    },
+    "ceb82646-4f65-42fd-a5ba-221e8c2e8aea": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/ceb82646-4f65-42fd-a5ba-221e8c2e8aea/original/book.epub",
+      "id": "ceb82646-4f65-42fd-a5ba-221e8c2e8aea",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T08:40:30.026Z",
+      "subjects": [
+        "Music and Sound Technology"
+      ],
+      "title": "Music and Sound Technology for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "d0b51d5b-e4c0-4fbe-805d-6410d3d71d09": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/d0b51d5b-e4c0-4fbe-805d-6410d3d71d09/original/book.epub",
+      "id": "d0b51d5b-e4c0-4fbe-805d-6410d3d71d09",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Graphic Design"
+      ],
+      "title": "Graphic Design for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "d18a27ae-e546-46d3-ab07-4ed5fdc8d358": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/d18a27ae-e546-46d3-ab07-4ed5fdc8d358/original/book.epub",
+      "id": "d18a27ae-e546-46d3-ab07-4ed5fdc8d358",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-12T11:43:13.121Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili  Shule za Sekondari Kitabu cha Mwanafunzi  Kidato cha Sita"
+    },
+    "d4096ee4-2907-4aed-b588-f3a95245ed2b": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/d4096ee4-2907-4aed-b588-f3a95245ed2b/original/book.epub",
+      "id": "d4096ee4-2907-4aed-b588-f3a95245ed2b",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:22:50.197Z",
+      "subjects": [
+        "Life Skills"
+      ],
+      "title": "Life Skills for Secondary Schools Vocational Stream Student’s Book Form One"
+    },
+    "d44b802f-296d-4238-a873-334c84b028a9": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/d44b802f-296d-4238-a873-334c84b028a9/original/book.epub",
+      "id": "d44b802f-296d-4238-a873-334c84b028a9",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Bonjour 3 ! Méthode de Français Student’s Book Form Three"
+    },
+    "d5574b98-dec3-4e8e-9efb-3bf9602edc58": {
+      "classes": [
+        "Darasa la Tatu",
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/d5574b98-dec3-4e8e-9efb-3bf9602edc58/original/book.epub",
+      "id": "d5574b98-dec3-4e8e-9efb-3bf9602edc58",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T15:47:55.204Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English Pupil’s Book Standard Three"
+    },
+    "d55a549b-69f3-446f-bb78-fd12209be36e": {
+      "classes": [
+        "Darasa la Tatu",
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/d55a549b-69f3-446f-bb78-fd12209be36e/original/book.epub",
+      "id": "d55a549b-69f3-446f-bb78-fd12209be36e",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T05:24:31.912Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Darasa la 3"
+    },
+    "d7e19636-ecce-49d1-b63c-667bdcb886ef": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/d7e19636-ecce-49d1-b63c-667bdcb886ef/original/book.epub",
+      "id": "d7e19636-ecce-49d1-b63c-667bdcb886ef",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:09:06.432Z",
+      "subjects": [
+        "Fine Art"
+      ],
+      "title": "Fine Art for Secondary Schools Student’s Book Form Two"
+    },
+    "d9e6efec-138d-4d0b-abf1-1a9fb476c0f3": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/d9e6efec-138d-4d0b-abf1-1a9fb476c0f3/original/book.epub",
+      "id": "d9e6efec-138d-4d0b-abf1-1a9fb476c0f3",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Academic Communication"
+      ],
+      "title": "Academic Communication for Advanced Secondary Schools Student's Book Form Six"
+    },
+    "dae26484-3454-4348-9ae7-646e7bb31a54": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/dae26484-3454-4348-9ae7-646e7bb31a54/original/book.epub",
+      "id": "dae26484-3454-4348-9ae7-646e7bb31a54",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T14:07:51.441Z",
+      "subjects": [
+        "Kuandika"
+      ],
+      "title": "Kuandika Kitabu cha Mwanafunzi Darasa la Kwanza"
+    },
+    "dcc2627a-b477-4ab3-9a27-dd1766fef375": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/dcc2627a-b477-4ab3-9a27-dd1766fef375/original/book.epub",
+      "id": "dcc2627a-b477-4ab3-9a27-dd1766fef375",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T07:16:19.751Z",
+      "subjects": [
+        "Food and Beverage Services"
+      ],
+      "title": "Food and Beverage Services and Sales for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "def6d3d3-9f61-4c45-b6d7-abe4b4119b07": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/def6d3d3-9f61-4c45-b6d7-abe4b4119b07/original/book.epub",
+      "id": "def6d3d3-9f61-4c45-b6d7-abe4b4119b07",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T07:40:25.223Z",
+      "subjects": [
+        "Book-keeping"
+      ],
+      "title": "Book-keeping for Secondary Schools Student’s Book Form One"
+    },
+    "df800d13-645a-45e5-afde-3d07643ec62a": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/df800d13-645a-45e5-afde-3d07643ec62a/original/book.epub",
+      "id": "df800d13-645a-45e5-afde-3d07643ec62a",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Fitter Mechanics"
+      ],
+      "title": "Fitter Mechanics for Secondary Schools Vocational Stream Student’s Book Form Two"
+    },
+    "dfa3ac2e-21c8-4020-a6f5-a9d91b6ca9ad": {
+      "classes": [
+        "Standard Five"
+      ],
+      "fileUrl": "/content/epub/dfa3ac2e-21c8-4020-a6f5-a9d91b6ca9ad/original/book.epub",
+      "id": "dfa3ac2e-21c8-4020-a6f5-a9d91b6ca9ad",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-05T08:56:30.161Z",
+      "subjects": [
+        "Arts and Sports"
+      ],
+      "title": "Arts and Sports Pupil’s Book Standard Five"
+    },
+    "dfdb5116-19cc-45dc-bc58-30ade217d4c2": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/dfdb5116-19cc-45dc-bc58-30ade217d4c2/original/book.epub",
+      "id": "dfdb5116-19cc-45dc-bc58-30ade217d4c2",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T14:38:09.207Z",
+      "subjects": [
+        "Learn English"
+      ],
+      "title": "Learn English Pupil’s Book Standard One"
+    },
+    "e11564b1-6458-4b9c-bcdf-bec0a03a7dc1": {
+      "classes": [
+        "Standard One"
+      ],
+      "fileUrl": "/content/epub/e11564b1-6458-4b9c-bcdf-bec0a03a7dc1/original/book.epub",
+      "id": "e11564b1-6458-4b9c-bcdf-bec0a03a7dc1",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T14:56:08.535Z",
+      "subjects": [
+        "Learn English"
+      ],
+      "title": "Learn English Pupil’s Book Standard One (English Medium Schools)"
+    },
+    "e1241f05-d589-46e4-bdc3-b68f6cf65909": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/e1241f05-d589-46e4-bdc3-b68f6cf65909/original/book.epub",
+      "id": "e1241f05-d589-46e4-bdc3-b68f6cf65909",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-13T11:08:36.173Z",
+      "subjects": [
+        "Food and Human Nutrition"
+      ],
+      "title": "Food and Human Nutrition for Secondary Schools Student’s Book Form Two"
+    },
+    "e1b5e3c4-3919-440f-9317-87d4f4b987af": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/e1b5e3c4-3919-440f-9317-87d4f4b987af/original/book.epub",
+      "id": "e1b5e3c4-3919-440f-9317-87d4f4b987af",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T14:10:37.491Z",
+      "subjects": [
+        "Physics"
+      ],
+      "title": "Physics for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "e39a6b99-42eb-4dc1-837d-5357effd1827": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/e39a6b99-42eb-4dc1-837d-5357effd1827/original/book.epub",
+      "id": "e39a6b99-42eb-4dc1-837d-5357effd1827",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:23:20.836Z",
+      "subjects": [
+        "Field Crop Production"
+      ],
+      "title": "Field Crops Production For Vocational Secondary Schools Student's Book Form One"
+    },
+    "e41dae5b-43da-405a-80c0-a539cbd87be2": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/e41dae5b-43da-405a-80c0-a539cbd87be2/original/book.epub",
+      "id": "e41dae5b-43da-405a-80c0-a539cbd87be2",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T10:28:40.221Z",
+      "subjects": [
+        "Computer Science"
+      ],
+      "title": "Computer Science for Advanced Secondary Schools Student’s Book  Form Six"
+    },
+    "e47705ab-4b4e-4b1b-bdc5-7cbd28385915": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/e47705ab-4b4e-4b1b-bdc5-7cbd28385915/original/book.epub",
+      "id": "e47705ab-4b4e-4b1b-bdc5-7cbd28385915",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T10:33:58.759Z",
+      "subjects": [
+        "Accountancy"
+      ],
+      "title": "Accountancy for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "e4bcc07b-4416-4d5e-aac7-23cdca1defb6": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/e4bcc07b-4416-4d5e-aac7-23cdca1defb6/original/book.epub",
+      "id": "e4bcc07b-4416-4d5e-aac7-23cdca1defb6",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-08T11:45:40.711Z",
+      "subjects": [
+        "Business Studies"
+      ],
+      "title": "Business Studies for Advanced Secondary Schools Student's Book Form Five"
+    },
+    "e5c2d2e9-d987-4478-b39e-1b18d1067b39": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/e5c2d2e9-d987-4478-b39e-1b18d1067b39/original/book.epub",
+      "id": "e5c2d2e9-d987-4478-b39e-1b18d1067b39",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T07:40:36.840Z",
+      "subjects": [
+        "Arabic"
+      ],
+      "title": "Arabic for Secondary Schools Student’s Book Form One"
+    },
+    "e61572ed-b0d2-4529-b85c-7cbe5e096632": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/e61572ed-b0d2-4529-b85c-7cbe5e096632/original/book.epub",
+      "id": "e61572ed-b0d2-4529-b85c-7cbe5e096632",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Secondary Schools Vocational Stream Student’s Book Form One"
+    },
+    "e62f5e03-4d4e-448c-a5b0-93156890d481": {
+      "classes": [
+        "Darasa la Kwanza"
+      ],
+      "fileUrl": "/content/epub/e62f5e03-4d4e-448c-a5b0-93156890d481/original/book.epub",
+      "id": "e62f5e03-4d4e-448c-a5b0-93156890d481",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-03T13:53:12.344Z",
+      "subjects": [
+        "Kuhesabu"
+      ],
+      "title": "Kuhesabu Kitabu cha Mwanafunzi Darasa la Kwanza"
+    },
+    "e63e8cc6-22bf-4c06-937f-f48fa14800b2": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/e63e8cc6-22bf-4c06-937f-f48fa14800b2/original/book.epub",
+      "id": "e63e8cc6-22bf-4c06-937f-f48fa14800b2",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-01T13:00:04.835Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili Shule za Sekondari Kitabu cha Mwanafunzi Kidato cha Kwanza"
+    },
+    "e7327ab1-fe96-4848-bcbd-0a0cbf7e7a58": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/e7327ab1-fe96-4848-bcbd-0a0cbf7e7a58/original/book.epub",
+      "id": "e7327ab1-fe96-4848-bcbd-0a0cbf7e7a58",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-09T11:56:14.334Z",
+      "subjects": [
+        "Microeconomics"
+      ],
+      "title": "Microeconomics for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "e880afac-1695-4d14-a2f6-44e583487218": {
+      "classes": [
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/e880afac-1695-4d14-a2f6-44e583487218/original/book.epub",
+      "id": "e880afac-1695-4d14-a2f6-44e583487218",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Science"
+      ],
+      "title": "Science Pupil’s Book Standard Three"
+    },
+    "e994aaee-09af-4bd9-81d5-d6a0eeb8ed34": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/e994aaee-09af-4bd9-81d5-d6a0eeb8ed34/original/book.epub",
+      "id": "e994aaee-09af-4bd9-81d5-d6a0eeb8ed34",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:36:53.973Z",
+      "subjects": [
+        "Handloom Weaving"
+      ],
+      "title": "Handloom Weaving for Secondary Schools Vocational Stream Student's Book Form Two"
+    },
+    "e9ae4f0b-0d18-456d-8bff-204fd9f584a4": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/e9ae4f0b-0d18-456d-8bff-204fd9f584a4/original/book.epub",
+      "id": "e9ae4f0b-0d18-456d-8bff-204fd9f584a4",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-14T13:24:26.430Z",
+      "subjects": [
+        "Auto Electric"
+      ],
+      "title": "Auto Electric for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "ea30a50f-515b-471c-b4fc-08c315896840": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/ea30a50f-515b-471c-b4fc-08c315896840/original/book.epub",
+      "id": "ea30a50f-515b-471c-b4fc-08c315896840",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-08-12T09:51:54.524Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "Student's Book Form One English for Secondary Schools"
+    },
+    "eb5ae0e2-54ba-42eb-9784-c5f35c75619e": {
+      "classes": [
+        "Darasa la Nne",
+        "Standard Four"
+      ],
+      "fileUrl": "/content/epub/eb5ae0e2-54ba-42eb-9784-c5f35c75619e/original/book.epub",
+      "id": "eb5ae0e2-54ba-42eb-9784-c5f35c75619e",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T12:50:30.590Z",
+      "subjects": [
+        "French",
+        "Sayansi"
+      ],
+      "title": "Bonjour les Amis ! Méthode de français Livre de l’élève 2"
+    },
+    "ec526cbd-38f7-48a8-b69b-d578e8b13610": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/ec526cbd-38f7-48a8-b69b-d578e8b13610/original/book.epub",
+      "id": "ec526cbd-38f7-48a8-b69b-d578e8b13610",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-07-31T13:28:50.034Z",
+      "subjects": [
+        "Leather Goods and Footwear"
+      ],
+      "title": "Leather Goods and Footwear for Secondary Schools Vocational Stream  Student’s Book Form Two"
+    },
+    "edee01d7-6eab-4822-a5c8-07579342ecef": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/edee01d7-6eab-4822-a5c8-07579342ecef/original/book.epub",
+      "id": "edee01d7-6eab-4822-a5c8-07579342ecef",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Front Office Operations"
+      ],
+      "title": "Front Office Operations For Vocational Secondary Schools Student's Book Form One"
+    },
+    "ef2dd60e-558f-4014-b95c-41406699d08a": {
+      "classes": [
+        "Darasa la Nne"
+      ],
+      "fileUrl": "/content/epub/ef2dd60e-558f-4014-b95c-41406699d08a/original/book.epub",
+      "id": "ef2dd60e-558f-4014-b95c-41406699d08a",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T13:49:22.572Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili Kitabu cha Mwanafunzi Darasa la Nne"
+    },
+    "f02498ed-2d50-4dce-9def-4c4efe7b64f6": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/f02498ed-2d50-4dce-9def-4c4efe7b64f6/original/book.epub",
+      "id": "f02498ed-2d50-4dce-9def-4c4efe7b64f6",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Advanced Secondary Schools Student's Book Form Six"
+    },
+    "f26f40ee-6106-4f01-84e4-ab84a3f38edd": {
+      "classes": [
+        "Form One"
+      ],
+      "fileUrl": "/content/epub/f26f40ee-6106-4f01-84e4-ab84a3f38edd/original/book.epub",
+      "id": "f26f40ee-6106-4f01-84e4-ab84a3f38edd",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-15T16:21:28.331Z",
+      "subjects": [
+        "Wood Processing"
+      ],
+      "title": "Wood Processing for Vocational Secondary Schools Student’s Book Form One"
+    },
+    "f3f69cc6-9153-49aa-bf2a-de51577e21a7": {
+      "classes": [
+        "Darasa la Tatu"
+      ],
+      "fileUrl": "/content/epub/f3f69cc6-9153-49aa-bf2a-de51577e21a7/original/book.epub",
+      "id": "f3f69cc6-9153-49aa-bf2a-de51577e21a7",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Jiografia na Mazingira"
+      ],
+      "title": "Jiografia na Mazingira Kitabu cha Mwanafunzi Darasa la 3"
+    },
+    "f421716d-03ef-4976-9d72-78c8bcd898ea": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/f421716d-03ef-4976-9d72-78c8bcd898ea/original/book.epub",
+      "id": "f421716d-03ef-4976-9d72-78c8bcd898ea",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-01T05:28:36.206Z",
+      "subjects": [
+        "Electronics Repair"
+      ],
+      "title": "Electronics Repair for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "f4b67d80-8844-4493-b67d-ad819d8df950": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/f4b67d80-8844-4493-b67d-ad819d8df950/original/book.epub",
+      "id": "f4b67d80-8844-4493-b67d-ad819d8df950",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Computer Applications"
+      ],
+      "title": "Computer Applications for Secondary Schools: Student’s Book Form Three"
+    },
+    "f4b85114-d068-4bcf-9927-c69e70a5bbaf": {
+      "classes": [
+        "Darasa la Tano"
+      ],
+      "fileUrl": "/content/epub/f4b85114-d068-4bcf-9927-c69e70a5bbaf/original/book.epub",
+      "id": "f4b85114-d068-4bcf-9927-c69e70a5bbaf",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-07T05:47:45.434Z",
+      "subjects": [
+        "Kiswahili"
+      ],
+      "title": "Kiswahili Kitabu cha Mwanafunzi Darasa la Tano"
+    },
+    "f64621a5-5ffc-4bd2-93b1-d574f51d00ae": {
+      "classes": [
+        "Darasa la Tatu",
+        "Standard Three"
+      ],
+      "fileUrl": "/content/epub/f64621a5-5ffc-4bd2-93b1-d574f51d00ae/original/book.epub",
+      "id": "f64621a5-5ffc-4bd2-93b1-d574f51d00ae",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-08-04T05:24:41.683Z",
+      "subjects": [
+        "French"
+      ],
+      "title": "Méthode de français Livre de l’élève 1"
+    },
+    "f8e3d0d0-d63c-4c50-bfdb-dad85f4d2a55": {
+      "classes": [
+        "Form Five",
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/f8e3d0d0-d63c-4c50-bfdb-dad85f4d2a55/original/book.epub",
+      "id": "f8e3d0d0-d63c-4c50-bfdb-dad85f4d2a55",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Geography"
+      ],
+      "title": "Physical Geography for Advanced Secondary Schools: Student’s Book Form Five and Six"
+    },
+    "f9d5214d-86dc-45d2-a997-f76bbb771197": {
+      "classes": [
+        "Form Three"
+      ],
+      "fileUrl": "/content/epub/f9d5214d-86dc-45d2-a997-f76bbb771197/original/book.epub",
+      "id": "f9d5214d-86dc-45d2-a997-f76bbb771197",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-08-02T07:37:09.351Z",
+      "subjects": [
+        "Horticultural Production"
+      ],
+      "title": "Horticultural Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "fab9a55e-7677-4eed-b228-ec8264896f86": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/fab9a55e-7677-4eed-b228-ec8264896f86/original/book.epub",
+      "id": "fab9a55e-7677-4eed-b228-ec8264896f86",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Chemistry"
+      ],
+      "title": "General and Inorganic Chemistry for Advanced Secondary Schools"
+    },
+    "faec4c73-cff1-4b04-a831-e22a86224a6b": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/faec4c73-cff1-4b04-a831-e22a86224a6b/original/book.epub",
+      "id": "faec4c73-cff1-4b04-a831-e22a86224a6b",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-07-30T18:44:14.547Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Advanced Secondary Schools Student’s Book Form Five"
+    },
+    "fb10247e-61aa-4a95-bb88-dafe02b5d2fc": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/fb10247e-61aa-4a95-bb88-dafe02b5d2fc/original/book.epub",
+      "id": "fb10247e-61aa-4a95-bb88-dafe02b5d2fc",
+      "levels": [
+        "Ordinary Secondary Level - General"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Book-keeping"
+      ],
+      "title": "Book-keeping for Secondary Schools Student’s Book Form Two"
+    },
+    "fbf8a5c5-dfc9-4098-9698-658b3ff161ae": {
+      "classes": [
+        "Form Two"
+      ],
+      "fileUrl": "/content/epub/fbf8a5c5-dfc9-4098-9698-658b3ff161ae/original/book.epub",
+      "id": "fbf8a5c5-dfc9-4098-9698-658b3ff161ae",
+      "levels": [
+        "Ordinary Secondary Level - Vocational"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Tourism"
+      ],
+      "title": "Tourism for Secondary Schools Vocational Stream Form Two Student’s Book"
+    },
+    "fc8bd06d-32c9-46fc-9419-4838531aa303": {
+      "classes": [
+        "Standard Five"
+      ],
+      "fileUrl": "/content/epub/fc8bd06d-32c9-46fc-9419-4838531aa303/original/book.epub",
+      "id": "fc8bd06d-32c9-46fc-9419-4838531aa303",
+      "levels": [
+        "Primary"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Mathematics"
+      ],
+      "title": "Mathematics Pupil’s Book  Standard Five"
+    },
+    "fe036a18-485c-4c70-a5c3-f34f0266ffed": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/fe036a18-485c-4c70-a5c3-f34f0266ffed/original/book.epub",
+      "id": "fe036a18-485c-4c70-a5c3-f34f0266ffed",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "Historia ya Tanzania na Maadili"
+      ],
+      "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Kidato cha Tano"
+    },
+    "fe602406-d5fe-4a6a-b647-f1d890aa6a86": {
+      "classes": [
+        "Form Six"
+      ],
+      "fileUrl": "/content/epub/fe602406-d5fe-4a6a-b647-f1d890aa6a86/original/book.epub",
+      "id": "fe602406-d5fe-4a6a-b647-f1d890aa6a86",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-08-11T12:59:40.224Z",
+      "subjects": [
+        "English"
+      ],
+      "title": "English for Advanced Secondary Schools Student’s Book Form Six"
+    },
+    "fee28e9e-6c26-4a60-ba4a-8dd7c8bacb2f": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/fee28e9e-6c26-4a60-ba4a-8dd7c8bacb2f/original/book.epub",
+      "id": "fee28e9e-6c26-4a60-ba4a-8dd7c8bacb2f",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-09-16T20:49:53.389Z",
+      "subjects": [
+        "History"
+      ],
+      "title": "History for Advanced Secondary Schools Student’s Book Form Five"
+    }
+  },
+  "api_ever_ok": true,
+  "api_total": 278,
   "cdx_digests": {
     "https://ol.tie.go.tz/uploaded_files/books//secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page48.html": "L3MMJTXUIVBZ4OP7QRNULNIFIFJ65SZ3",
     "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL/FLIP/ADVANCED%20MATH.html": "QRDWYY3UWMHATEQSKQKPRM2XBR4U7JZF",
@@ -57,6 +4244,71 @@
     "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_Three/Textile_n_Garment/Textile_and_Garment_Form3.html": "YQ6J6FS66AK4Z3KUY3NRG2KP44HSKZV3"
   },
   "cdx_seen_once": true,
+  "direct_books": [
+    "https://ol.tie.go.tz/uploaded_files/books//secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page48.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL/FLIP/ADVANCED%20MATH.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL/FLIP/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Accountancy%20for%20Advanced%20Secondary%20Schools%20Teachers%20Guide%20Form%20Five/FLIP/Accountancy%20.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/BUSINESS%20STUDIES%20FORM%205%20FINAL/FLIP/BUSINESS%20STUDIES%20.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Biology%20for%20Advanced%20Secondary%20Schools%20Teachers%20Guide%20Form%20Five/FLIP/Biology%20.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Fasihi%20/FLIP/Fasihi%20ya%20Kiswahili%20.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Stud_Book/Business_Studies/Business_Studies_F5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Stud_Book/Chinese/Chinese_F5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Stud_Book/Computer_Sci/Computer_Science_F5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Stud_Book/Divinity/Divinity_F5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/Stud_Book/EDK/EDK_F5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Art_n_Sports/Art_n_Sports_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/English/English_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/French/French_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Geography/Geography_n_Environ_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Geography/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Hist_Maadili/Historiayatznamaadili.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Jiogefia_Mazingira/Jiografia_Mazingira.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Kichina/Kichina_Drs_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Kiswahili/Kiswahili_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Mathematics/Mathematics_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Sanaa_Michezo/Sanaa_Michezo_Drs_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Sanaa_Michezo/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Sayansi_Drs_4/Sayansi_Drs_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/primary/Eng/Std4/Science/Science_Std_4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Book-keeping_Form_One/Book-keeping%20for%20Secondary%20Schools%20Student%E2%80%99s%20Book%20Form%20One.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Book-keeping_Form_One/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Business_Studies_Form_One/Bisiness%20Studies.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Chinese_Form_One/Chinese.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Chinese_Form_One/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Computer_Science_Form_One/Computer.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Food_Human_Nurt_Form_One/Food%20And%20Human.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Geography_Form_One/Geography%20for%20Secondary%20Schools%20Student%E2%80%99s%20Book%20Form%20One.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Kiswahili_Kidato_cha_Kwanza/Kiswahili.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Mathematics_Form_One/Mathematics.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Music_Form_One/Music.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Physics_Form_One/Physics.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/Sports%20Studies.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/Sports_Studies_Form_1.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/index.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page1.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page10.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page2.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page3.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page4.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page5.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page6.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page7.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page8.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page9.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Textile_and_Garment_Form_One/Textile.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_One/Thiatre_Arts_Form_One/Thietre%20Arts.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_Three/Agriculture/Agriculture_Form_Three.html",
+    "https://ol.tie.go.tz/uploaded_files/books/secondary/Form_Three/Textile_n_Garment/Textile_and_Garment_Form3.html"
+  ],
+  "direct_dirs": {
+    "https://ol.tie.go.tz/uploaded_files/books/": {
+      "children": [],
+      "hash": "0fe3e68c0a4a1777624436c7f4b2754f928b05e5e5bd6e33a3f5e2468200da97",
+      "ok": true
+    }
+  },
+  "direct_ever_ok": true,
   "first_run_done": true,
   "known_book_roots": [
     "/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL",
@@ -168,9 +4420,10 @@
     "https://www.tie.go.tz/news/wajumbe-wa-aca-watembelea-shule-ya-baobab",
     "https://www.tie.go.tz/news/wizara-ya-elimu-kuendelea-kuunga-mkono-juhudi-za-waandishi-bunifu"
   ],
-  "last_direct_reachable": false,
-  "last_run": "2026-09-30T10:07:26.521036+00:00",
+  "last_direct_reachable": true,
+  "last_run": "2026-09-30T17:04:21.812640+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
-  "unreachable_since": "2026-09-29T22:25:14.598588+00:00"
+  "outage_alerted": false,
+  "unreachable_since": null
 }
