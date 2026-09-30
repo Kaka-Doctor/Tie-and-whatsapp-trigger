@@ -1,24 +1,27 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TIE e-Library Monitor
-====================
+TIE e-Library Monitor — whole-library edition
+============================================
 Watches https://ol.tie.go.tz (Tanzania Institute of Education online library)
-for new / changed books — with special attention to the Divinity Form 6 book —
-and sends WhatsApp alerts through CallMeBot (free for personal use).
+for ANY new book upload — every subject, level and form — and sends WhatsApp
+alerts through CallMeBot (free for personal use).
 
 Why multiple signal paths?
   ol.tie.go.tz is frequently unreachable from outside Tanzania (connection
   timeouts from US/EU datacenters). The monitor therefore combines:
 
-    1. DIRECT HTTPS probes        — used whenever the site happens to accept us
-    2. Wayback "Save Page Now"    — archive.org fetches the page for us and
-                                    records a fresh snapshot + content digest
-    3. Wayback CDX index          — passive: snapshots archived by ANYONE
-    4. www.tie.go.tz/news         — always reachable; TIE announces new books
+    1. DIRECT HTTPS enumeration — full crawl of the /uploaded_files/books/
+       tree (directory listings), sitemap.xml and catalogue API probes,
+       whenever the site accepts us. These runs are exact.
+    2. Wayback "Save Page Now" — archive.org fetches the library homepage
+       for us; the fresh snapshot is parsed for book links.
+    3. Wayback CDX index — passive: book pages archived by anyone;
+       new URLs and changed content digests.
+    4. www.tie.go.tz/news — always reachable; TIE announces new books.
 
 Configuration (GitHub repository secrets):
-    WHATSAPP_PHONE     e.g. +255765793764
+    WHATSAPP_PHONE     e.g. 255765793764
     CALLMEBOT_APIKEY   one-time free registration, see README.md
 
 State is kept in state.json (committed back to the repo after every run).
@@ -29,6 +32,7 @@ import hashlib
 import json
 import os
 import re
+import ssl
 import sys
 import time
 import urllib.error
@@ -38,21 +42,10 @@ from datetime import datetime, timezone
 
 # ----------------------------------------------------------------- configuration
 
-OL = "https://ol.tie.go.tz"
+OL = os.environ.get("TIE_OL_BASE", "https://ol.tie.go.tz")
 WWW_NEWS = "https://www.tie.go.tz/news"
 
-# The book we care about most (exact URL given by the user).
-WATCH_URL_PATH = "/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_Form_6.html"
-
-# The real library uses different folder patterns for different classes
-# (e.g. Form 5 = /adv_secondary/frmv/Stud_Book/Divinity/Divinity_F5.html),
-# so we probe several plausible locations for the Form 6 Divinity book too.
-CANDIDATE_PATHS = [
-    WATCH_URL_PATH,
-    "/uploaded_files/books/adv_secondary/frmvi/Stud_Book/Divinity/Divinity_F6.html",
-    "/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_F6.html",
-    "/uploaded_files/books/adv_secondary/frmvi/Divinity/Divinity_Form_F6.html",
-]
+BOOKS_PREFIX = "/uploaded_files/books/"        # the whole library lives here
 
 # Possible public catalogue endpoints of the library API (probed when reachable).
 API_PROBES = [
@@ -78,15 +71,19 @@ API_TIMEOUT = 25
 CDX_TIMEOUT = 75
 SPN_TIMEOUT = 80
 NEWS_TIMEOUT = 40
-SPN_SLEEP = 14               # seconds between Save-Page-Now calls (anonymous rate limit)
+
+CRAWL_MAX_PAGES = 200        # safety cap for the tree crawl
+CRAWL_MAX_DEPTH = 6          # books/<level>/<form>/<subject>/<book>/<file>.html
+CRAWL_DELAY = 0.35           # polite delay between listing fetches (seconds)
+CRAWL_TIME_BUDGET = 330      # hard wall-clock budget for the crawl (seconds)
 
 OUTAGE_ALERT_DAYS = 7        # alert once if the library is unreachable this long
+BACK_ONLINE_HOURS = 12       # only announce recovery after this long down
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
 
 STATE_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "state.json")
-
 
 # ------------------------------------------------------------------- utilities
 
@@ -106,24 +103,37 @@ class R:
         return self.status is not None and 200 <= self.status < 400
 
 
+_SSL_STRICT = ssl.create_default_context()
+_SSL_LOOSE = ssl.create_default_context()
+_SSL_LOOSE.check_hostname = False
+_SSL_LOOSE.verify_mode = ssl.CERT_NONE
+
+
 def http_get(url, timeout=30):
-    """GET a URL. Never raises — network failures return R(status=None)."""
-    req = urllib.request.Request(url, headers={
+    """GET a URL. Never raises — network failures return R(status=None).
+    Retries once without certificate verification on TLS problems (some
+    TIE hosts have historically served mismatched certificates)."""
+    headers = {
         "User-Agent": UA,
         "Accept": "text/html,application/json;q=0.9,*/*;q=0.8",
         "Accept-Language": "en-US,en;q=0.9",
-    })
-    try:
-        with urllib.request.urlopen(req, timeout=timeout) as resp:
-            return R(resp.status, resp.geturl(), resp.read(), None)
-    except urllib.error.HTTPError as e:
+    }
+    for attempt, ctx in enumerate((_SSL_STRICT, _SSL_LOOSE)):
+        req = urllib.request.Request(url, headers=headers)
         try:
-            body = e.read()
-        except Exception:
-            body = b""
-        return R(e.code, url, body, f"HTTP {e.code}")
-    except Exception as e:  # timeouts, DNS, refused, TLS...
-        return R(None, url, b"", f"{type(e).__name__}: {e}"[:160])
+            with urllib.request.urlopen(req, timeout=timeout, context=ctx) as resp:
+                return R(resp.status, resp.geturl(), resp.read(), None)
+        except urllib.error.HTTPError as e:
+            try:
+                body = e.read()
+            except Exception:
+                body = b""
+            return R(e.code, url, body, f"HTTP {e.code}")
+        except Exception as e:  # timeouts, DNS, refused, TLS...
+            if attempt == 0 and re.search(r"cert|ssl|tls", str(e), re.I):
+                continue      # retry without verification
+            return R(None, url, b"", f"{type(e).__name__}: {e}"[:160])
+    return R(None, url, b"", "unreachable")
 
 
 def sha256_hex(data):
@@ -171,6 +181,26 @@ def spn(url, timeout=SPN_TIMEOUT):
     return False, None, (r.err or f"status={r.status} final={r.final_url}")
 
 
+# Book links as they appear inside an archived (or live) library page.
+SNAP_BOOK_RE = re.compile(
+    r"(?:https?://ol\.tie\.go\.tz)?(/uploaded_files/books/"
+    r"[A-Za-z0-9\-_.%!/()+,' ]+?\.(?:html|htm|pdf|epub))", re.I)
+
+
+def spn_snapshot_book_links(ts, original_url):
+    """Fetch the snapshot that Save-Page-Now just created and pull book links."""
+    snap = f"https://web.archive.org/web/{ts}id_/{original_url}"
+    r = http_get(snap, timeout=SPN_TIMEOUT)
+    if not r.ok or not r.body:
+        return []
+    text = r.body.decode("utf-8", "replace")
+    links = set()
+    for m in SNAP_BOOK_RE.finditer(text):
+        path = m.group(1).split("?")[0].split("#")[0]
+        links.add(OL + path)
+    return sorted(links)
+
+
 # ------------------------------------------------------------------ news page
 
 NEWS_ITEM_RE = re.compile(
@@ -204,7 +234,7 @@ def book_root(url):
     if "/files/" in p:
         p = p.split("/files/")[0]
     parts = [x for x in p.split("/") if x]
-    if parts and parts[-1].lower().endswith((".html", ".htm")):
+    if parts and parts[-1].lower().endswith((".html", ".htm", ".pdf", ".epub")):
         parts.pop()                      # entry file -> book folder
     while parts and parts[-1].lower() in ("flip", "files", "thumb"):
         parts.pop()                      # flipbook wrapper folders
@@ -233,6 +263,87 @@ def extract_book_urls(obj, out=None):
         for v in obj:
             extract_book_urls(v, out)
     return out
+
+
+def sitemap_book_urls():
+    """Fetch sitemap.xml (following one level of sitemap index). Book URLs only."""
+    found, queue, seen = [], [OL + "/sitemap.xml"], set()
+    while queue and len(seen) < 5:
+        sm = queue.pop(0)
+        if sm in seen:
+            continue
+        seen.add(sm)
+        r = http_get(sm, timeout=DIRECT_TIMEOUT)
+        if not r.ok or not r.body:
+            continue
+        text = r.body.decode("utf-8", "replace")
+        locs = [m.group(1).strip()
+                for m in re.finditer(r"<loc>\s*([^<]+?)\s*</loc>", text)]
+        for loc in locs:
+            path = urllib.parse.urlsplit(urllib.parse.urljoin(OL, loc)).path
+            if BOOKS_PREFIX in path:
+                found.append(urllib.parse.urljoin(OL, loc))
+        for loc in locs:                 # nested sitemap indexes, same host only
+            if (loc.lower().endswith(".xml")
+                    and urllib.parse.urlsplit(loc).netloc == urllib.parse.urlsplit(OL).netloc):
+                queue.append(loc)
+    return sorted(set(found))
+
+
+def crawl_books_tree():
+    """BFS through the directory listings under /uploaded_files/books/.
+
+    Returns (dirs, files, root_ok):
+      dirs   {listing_url: {"ok": bool, "hash": str, "children": [names]}}
+      files  {book_file_url: listing_url}
+      root_ok  True when the root listing answered HTTP 200
+    """
+    root = OL + BOOKS_PREFIX
+    root_netloc = urllib.parse.urlsplit(root).netloc
+    dirs, files = {}, {}
+    root_ok = False
+    queue = [(root, 0)]
+    fetched = 0
+    deadline = time.monotonic() + CRAWL_TIME_BUDGET
+    while queue and fetched < CRAWL_MAX_PAGES and time.monotonic() < deadline:
+        url, depth = queue.pop(0)
+        if url in dirs:
+            continue
+        r = http_get(url, timeout=DIRECT_TIMEOUT)
+        fetched += 1
+        if r.status != 200 or not r.body:
+            dirs[url] = {"ok": False, "hash": None, "children": []}
+            if fetched <= 3 or r.status not in (None,):
+                log(f"    {urllib.parse.urlsplit(url).path} -> {r.status}"
+                    + (f" ({(r.err or '')[:60]})" if r.status is None else ""))
+            continue
+        body = r.body
+        text = body.decode("utf-8", "replace")
+        here = urllib.parse.urlsplit(url).path
+        children = []
+        for href in re.findall(r'href=[\'"]([^\'"#]+)[\'"]', text):
+            if href.startswith(("javascript:", "mailto:", "tel:", "?")):
+                continue
+            absu = urllib.parse.urljoin(url, href).split("#")[0]
+            u = urllib.parse.urlsplit(absu)
+            if (u.scheme not in ("http", "https")
+                    or u.netloc != root_netloc
+                    or not u.path.startswith(BOOKS_PREFIX)
+                    or u.query):
+                continue
+            name = u.path.rstrip("/").rsplit("/", 1)[-1]
+            if u.path.endswith("/"):
+                children.append(name + "/")
+                if depth + 1 <= CRAWL_MAX_DEPTH and absu not in dirs:
+                    queue.append((absu.rstrip("/") + "/", depth + 1))
+            elif u.path != here:
+                children.append(name)
+                files[absu] = url
+        dirs[url] = {"ok": True, "hash": sha256_hex(body), "children": sorted(children)}
+        if url == root:
+            root_ok = True
+        time.sleep(CRAWL_DELAY)
+    return dirs, files, root_ok
 
 
 # ------------------------------------------------------------------ state
@@ -291,24 +402,35 @@ def main():
 
     first_run = not state.get("first_run_done")
     messages = []          # alert texts for this run
+    prev_unreachable_since = state.get("unreachable_since")
+    prev_reachable = state.get("last_direct_reachable")
 
-    # -------------------------------------------------- phase 1: direct probes
-    log("── Phase 1: direct probes to ol.tie.go.tz")
-    cand_urls = [OL + p for p in CANDIDATE_PATHS]
-    home_url = OL + "/"
-    direct = parallel_get(cand_urls + [home_url], DIRECT_TIMEOUT)
-    home = direct.get(home_url)
-    ol_reachable = home is not None and home.status is not None
+    # -------------------------------------------------- phase 1: direct contact
+    log("── Phase 1: direct contact with ol.tie.go.tz")
+    home = http_get(OL + "/", timeout=DIRECT_TIMEOUT)
+    ol_reachable = home.status is not None
+    enumerated = set()     # every book URL seen directly this run
+    crawl_dirs, crawl_root_ok = {}, False
 
-    cat_urls = {}
     if ol_reachable:
-        log(f"  ✅ ol.tie.go.tz IS reachable directly right now (status={home.status})")
+        log(f"  ✅ ol.tie.go.tz reachable (status={home.status})")
         state["unreachable_since"] = None
         state["outage_alerted"] = False
+
+        log("  crawling the /uploaded_files/books/ tree ...")
+        crawl_dirs, crawl_files, crawl_root_ok = crawl_books_tree()
+        enumerated |= set(crawl_files)
+        log(f"  crawl: {len(crawl_dirs)} listing pages, {len(crawl_files)} "
+            f"book files, root_ok={crawl_root_ok}")
+
+        sm = sitemap_book_urls()
+        if sm:
+            enumerated |= set(sm)
+            log(f"  sitemap.xml: {len(sm)} book URLs")
+
+        cat_urls = {}
         api = parallel_get([OL + p for p in API_PROBES], API_TIMEOUT)
         for u, r in sorted(api.items()):
-            if r.status is not None:
-                log(f"  probe {urllib.parse.urlsplit(u).path} -> {r.status} ({len(r.body)}B)")
             if r.status == 200 and r.body[:1] in (b"{", b"["):
                 try:
                     data = json.loads(r.body.decode("utf-8", "replace"))
@@ -318,45 +440,109 @@ def main():
                 except Exception:
                     pass
         if cat_urls:
-            log(f"  catalogue API exposed {len(cat_urls)} book URLs")
+            enumerated |= set(cat_urls)
+            log(f"  catalogue API: {len(cat_urls)} book URLs")
     else:
-        log(f"  ❌ ol.tie.go.tz unreachable directly ({(home.err if home else 'no result')})")
+        log(f"  ❌ ol.tie.go.tz unreachable ({(home.err if home else '?')})")
         if not state.get("unreachable_since"):
             state["unreachable_since"] = now.isoformat()
 
-    cand_status = {u: (direct.get(u).status if direct.get(u) else None) for u in cand_urls}
-    any_200 = [u for u, s in cand_status.items() if s == 200]
-    any_404 = [u for u, s in cand_status.items() if s == 404]
-    for u, s in cand_status.items():
-        log(f"  candidate {urllib.parse.urlsplit(u).path[-45:]} -> {s}")
+    # --- direct-set diffing (own baseline; first success only records it) ---
+    new_direct, updated_direct, removed_files, removed_dirs = [], [], [], []
+    prev_dirs = state.get("direct_dirs", {}) or {}
+    direct_ok = bool(enumerated) or crawl_root_ok
+    if direct_ok:
+        baseline = set(state.get("direct_books", []))
+        if not state.get("direct_ever_ok"):
+            log("  direct enumeration first success — recording baseline "
+                f"({len(enumerated)} book files seen)")
+            state["direct_books"] = sorted(baseline | enumerated
+                                           | set(state.get("known_book_urls", [])))
+        else:
+            new_direct = sorted(enumerated - baseline)
+            for durl, info in crawl_dirs.items():
+                prev = prev_dirs.get(durl)
+                if not (prev and prev.get("ok") and info.get("ok")):
+                    continue
+                gone = set(prev.get("children", [])) - set(info.get("children", []))
+                for child in gone:
+                    if child.endswith("/"):
+                        removed_dirs.append((durl, child))
+                    else:
+                        removed_files.append(durl + child)
+                if (not gone
+                        and prev.get("hash") != info.get("hash")
+                        and prev.get("children") == info.get("children")):
+                    updated_direct.append(durl)
+            removed_urls = {u for u in removed_files}
+            if len(removed_urls) > max(10, len(baseline) // 2):
+                log(f"  crawl looks partial ({len(removed_urls)} removals) — "
+                    "suppressing removal alerts this run")
+                removed_files, removed_dirs = [], []
+            kept = (set(state.get("direct_books", [])) | enumerated) - removed_urls
+            for durl, dirname in removed_dirs:
+                prefix = durl + dirname
+                kept = {u for u in kept if not u.startswith(prefix)}
+            state["direct_books"] = sorted(kept)
+        state["direct_ever_ok"] = True
+        state["direct_dirs"] = {u: {"ok": i.get("ok"), "hash": i.get("hash"),
+                                    "children": i.get("children")}
+                                for u, i in crawl_dirs.items()}
 
     # -------------------------------------------------- phase 2: Wayback SPN
-    log("── Phase 2: Wayback Save-Page-Now (active probe)")
-    watch_saved, watch_ts, watch_note = spn(OL + WATCH_URL_PATH)
-    log(f"  SPN watch-url: saved={watch_saved} ts={watch_ts or '-'} ({watch_note[:90]})")
-    home_saved = False
+    spn_books = []
     if not ol_reachable:
-        time.sleep(SPN_SLEEP)
-        home_saved, home_ts, home_note = spn(home_url)
-        log(f"  SPN homepage:  saved={home_saved} ts={home_ts or '-'} ({home_note[:90]})")
+        log("── Phase 2: Wayback Save-Page-Now (active probe)")
+        saved, ts, note = spn(OL + "/")
+        state["last_spn_home_saved"] = saved
+        log(f"  SPN homepage: saved={saved} ts={ts or '-'} ({(note or '')[:90]})")
+        if saved and ts:
+            spn_books = spn_snapshot_book_links(ts, OL + "/")
+            log(f"  homepage snapshot exposes {len(spn_books)} book links")
+            prev_spn = set(state.get("spn_books", []))
+            if not state.get("spn_ever_ok"):
+                state["spn_books"] = sorted(prev_spn | set(spn_books)
+                                           | set(state.get("known_book_urls", [])))
+                state["spn_ever_ok"] = True
+                log("  snapshot source first success — recording baseline")
+            else:
+                new_books_spn = sorted(set(spn_books) - prev_spn)
+                if new_books_spn:
+                    spn_new = sorted({pretty_book_name(book_root(u))
+                                      for u in new_books_spn})
+                    extra = "" if len(spn_new) <= 6 else f"\n…and {len(spn_new) - 6} more"
+                    messages.append(
+                        "📚 *New book(s) visible on the TIE e-Library homepage* "
+                        "(via web archive):\n• " + "\n• ".join(spn_new[:6]) + extra)
+                state["spn_books"] = sorted(prev_spn | set(spn_books))
+    else:
+        state["last_spn_home_saved"] = False
 
     # -------------------------------------------------- phase 3: Wayback CDX
     log("── Phase 3: Wayback CDX index (passive signal)")
     all_rows = cdx(BOOK_CDX_PREFIX, collapse=True)
-    log(f"  unique archived book URLs: {len(all_rows)}")
-    watch_rows = cdx("ol.tie.go.tz" + WATCH_URL_PATH, collapse=False, limit=50)
-    latest_watch = watch_rows[-1] if watch_rows else None
-    if latest_watch:
-        log(f"  latest archived snapshot of watch url: ts={latest_watch.get('timestamp')} "
-            f"status={latest_watch.get('statuscode')} digest={latest_watch.get('digest', '')[:12]}")
+    ok_rows = [row for row in all_rows if str(row.get("statuscode")) == "200"]
+    html_entries = [row for row in ok_rows
+                    if (row.get("original") or "").lower()
+                    .endswith((".html", ".htm", ".pdf"))]
+    log(f"  unique archived book URLs: {len(html_entries)}")
 
-    html_entries = [row for row in all_rows
-                    if (row.get("original") or "").lower().endswith((".html", ".htm"))]
     known_urls = set(state.get("known_book_urls", []))
     new_entries = [row for row in html_entries if row["original"] not in known_urls]
     roots = {book_root(row["original"]) for row in html_entries}
     known_roots = set(state.get("known_book_roots", []))
     new_roots = roots - known_roots
+
+    prev_digests = state.get("cdx_digests", {}) or {}
+    updated_cdx = []
+    if state.get("cdx_seen_once") and html_entries:
+        updated_cdx = [row["original"] for row in html_entries
+                       if row.get("digest") and prev_digests.get(row["original"])
+                       and prev_digests[row["original"]] != row["digest"]]
+    if html_entries:      # keep old digests when the CDX query itself failed
+        state["cdx_digests"] = {row["original"]: row.get("digest")
+                                for row in html_entries if row.get("digest")}
+        state["cdx_seen_once"] = True
 
     # -------------------------------------------------- phase 4: TIE news
     log("── Phase 4: TIE news page (www.tie.go.tz)")
@@ -377,70 +563,40 @@ def main():
 
     # -------------------------------------------------- phase 5: analysis
     log("── Phase 5: analysis")
-    watch_state = state.get("watch", {}) or {}
-    prev_exists = watch_state.get("exists")       # None / True / False
-    prev_digest = watch_state.get("digest")
-    prev_found = watch_state.get("found_url")
-
-    exists_now = None
-    digest_now = None
-    found_url = None
-
-    if any_200:
-        u = any_200[0]
-        exists_now = True
-        digest_now = "sha256:" + sha256_hex(direct[u].body)
-        found_url = u
-    elif ol_reachable and len(any_404) == len(cand_urls):
-        exists_now = False                       # site up, all candidates 404
-    elif watch_saved:
-        exists_now = True                        # archive.org just saved it (2xx)
-        digest_now = f"spn:{watch_ts}"
-        found_url = OL + WATCH_URL_PATH
-    elif home_saved and not watch_saved:
-        exists_now = False                       # site reachable via archive, page missing
-    if exists_now is None and latest_watch and str(latest_watch.get("statuscode")) in ("200", "-2xx"):
-        exists_now = True                        # CDX has a 200 snapshot
-        digest_now = f"cdx:{latest_watch.get('digest')}"
-        found_url = latest_watch.get("original")
-
-    verdict = {True: "AVAILABLE ✅", False: "not found ❌", None: "unknown ❓"}[exists_now]
-    log(f"  Divinity Form 6 verdict: {verdict} (previous: {prev_exists})")
-
-    # -------------------------------------------------- build alerts
     if not first_run:
-        if exists_now is True and prev_exists is not True:
+        # new books — live catalogue / sitemap (exact)
+        if new_direct:
+            pretty = sorted({pretty_book_name(book_root(u)) for u in new_direct})
+            extra = "" if len(pretty) <= 6 else f"\n…and {len(pretty) - 6} more"
             messages.append(
-                "🎯 *Divinity Form 6 is on the TIE e-Library!*\n"
-                f"{found_url or prev_found or OL + WATCH_URL_PATH}")
-        elif (exists_now is True and prev_exists is True
-              and digest_now and prev_digest and digest_now != prev_digest):
-            messages.append(
-                "📝 *Divinity Form 6 book was updated/changed.*\n"
-                f"{found_url or OL + WATCH_URL_PATH}")
-        elif exists_now is False and prev_exists is True:
-            messages.append(
-                "⚠️ Divinity Form 6 is no longer accessible at its previous URL.\n"
-                "(It may have been moved — check ol.tie.go.tz)")
+                "📚 *New book(s) uploaded to the TIE e-Library:*\n• "
+                + "\n• ".join(pretty[:6]) + extra)
 
+        # new books — Wayback index (passive)
         if new_roots:
             pretty = sorted(pretty_book_name(r) for r in new_roots)
-            extra = "" if len(new_roots) <= 5 else f"\n…and {len(new_roots) - 5} more"
+            extra = "" if len(pretty) <= 5 else f"\n…and {len(pretty) - 5} more"
             messages.append(
-                "📚 *New book(s) detected in the TIE library* (via Wayback index):\n• "
-                + "\n• ".join(pretty[:5]) + extra)
+                "📚 *New book(s) detected in the TIE library* (via Wayback "
+                "index):\n• " + "\n• ".join(pretty[:5]) + extra)
 
-        if cat_urls:
-            known_cat = set(state.get("known_catalog_urls", []))
-            fresh_cat = [u for u in cat_urls if u not in known_cat]
-            if fresh_cat:
-                titles = sorted({cat_urls[u] for u in fresh_cat})
-                extra = "" if len(titles) <= 5 else f"\n…and {len(titles) - 5} more"
-                messages.append(
-                    "📚 *New book(s) on the TIE e-Library catalogue:*\n• "
-                    + "\n• ".join(titles[:5]) + extra)
-            state["known_catalog_urls"] = sorted(
-                set(state.get("known_catalog_urls", [])) | set(cat_urls))
+        # updated book files (same folder, changed content/listing)
+        updated_names = sorted({pretty_book_name(d.rstrip("/")) for d in updated_direct})
+        updated_names += sorted({pretty_book_name(book_root(u)) for u in updated_cdx})
+        if updated_names:
+            extra = "" if len(updated_names) <= 5 else f"\n…and {len(updated_names) - 5} more"
+            messages.append(
+                "📝 *Book file(s) updated on the TIE e-Library:*\n• "
+                + "\n• ".join(sorted(set(updated_names))[:5]) + extra)
+
+        # removed / renamed books
+        if removed_files or removed_dirs:
+            names = sorted({pretty_book_name(book_root(u)) for u in removed_files})
+            names += sorted(d.rstrip("/") for _, d in removed_dirs)
+            extra = "" if len(names) <= 5 else f"\n…and {len(names) - 5} more"
+            messages.append(
+                "⚠️ Book(s) no longer listed on the TIE e-Library (removed or "
+                "renamed):\n• " + "\n• ".join(names[:5]) + extra)
 
         for it in news_new[:3]:
             messages.append(f"📰 *TIE news* (may relate to books):\n{it['title']}\n{it['url']}")
@@ -453,12 +609,28 @@ def main():
                 days = 0
             if days >= OUTAGE_ALERT_DAYS:
                 messages.append(
-                    f"⚠️ Heads-up: the TIE e-Library has been unreachable from my monitoring "
-                    f"vantage points for {days} days.\nI keep watching the Wayback index and "
-                    "TIE news in the meantime.")
+                    f"⚠️ Heads-up: the TIE e-Library has been unreachable from my "
+                    f"monitoring vantage points for {days} days.\nI keep watching "
+                    "the Wayback index and TIE news in the meantime.")
                 state["outage_alerted"] = True
     else:
         log("  first run — building baseline, no alerts for existing content")
+
+    # library came back online after a longer outage
+    if (ol_reachable and prev_unreachable_since
+            and not first_run and prev_reachable is False):
+        down_hours = 0.0
+        try:
+            down_hours = ((now - datetime.fromisoformat(prev_unreachable_since))
+                          .total_seconds() / 3600)
+        except Exception:
+            pass
+        if down_hours >= BACK_ONLINE_HOURS:
+            messages.append(
+                "ℹ️ The TIE e-Library is reachable again — live catalogue checks "
+                "resumed. "
+                + (f"{len(enumerated)} book files currently catalogued."
+                   if enumerated else ""))
 
     # -------------------------------------------------- send / save state
     if messages:
@@ -468,34 +640,21 @@ def main():
         log("no changes detected — no notification sent")
 
     if first_run:
-        status_txt = ("already online 📖\n" + (found_url or OL + WATCH_URL_PATH)
-                      if exists_now is True else
-                      "not detected yet — you'll get a 🎯 message when it appears")
         send_whatsapp("✅ *TIE Library Monitor is now ACTIVE.*\n"
-                      f"Watched book: Divinity Form 6 — {status_txt}.\n"
-                      "I also watch for new TIE books and book-related TIE news.\n"
-                      "— your free GitHub Actions monitor 🤖")
+                      "I watch the whole TIE e-Library for ANY new book upload "
+                      "(every subject, level and form), plus book-related TIE "
+                      "news.\n— your free GitHub Actions monitor 🤖")
 
     state.update({
         "first_run_done": True,
         "last_run": now.isoformat(),
         "last_direct_reachable": ol_reachable,
-        "last_spn_watch_saved": watch_saved,
-        "last_spn_home_saved": home_saved,
         "known_book_urls": sorted(known_urls | {row["original"] for row in html_entries}),
         "known_book_roots": sorted(known_roots | roots),
         "known_news": sorted(set(state.get("known_news", []))
                              | {i["url"] for i in (items or [])}),
-        "watch": {
-            "url": WATCH_URL_PATH,
-            "exists": exists_now,
-            "digest": digest_now,
-            "found_url": found_url,
-            "checked_at": now.isoformat(),
-            "direct_candidate_status": {urllib.parse.urlsplit(u).path: s
-                                        for u, s in cand_status.items()},
-        },
     })
+    state.pop("watch", None)          # legacy Divinity-watch state, no longer used
     save_state(state)
     log("state.json saved — done ✔")
     return 0
