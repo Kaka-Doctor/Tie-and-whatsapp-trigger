@@ -1264,21 +1264,6 @@
       ],
       "title": "Textiles and Garment Construction for Advanced Secondary Schools Student’s Book Form Five"
     },
-    "48f9c671-10d0-43b5-b5a9-9dc2d295ec6b": {
-      "classes": [
-        "Form Five"
-      ],
-      "fileUrl": "/content/epub/48f9c671-10d0-43b5-b5a9-9dc2d295ec6b/original/book.epub",
-      "id": "48f9c671-10d0-43b5-b5a9-9dc2d295ec6b",
-      "levels": [
-        "Advanced Secondary Level"
-      ],
-      "publishedAt": "2026-08-08T11:31:25.597Z",
-      "subjects": [
-        "Biology"
-      ],
-      "title": "Biology for Advanced Secondary Schools Student’s Book Form Five"
-    },
     "4adaf274-dfa0-4fb7-9b6b-71b766ab63be": {
       "classes": [
         "Form Three"
@@ -3624,6 +3609,21 @@
       ],
       "title": "Learn English Pupil’s Book Standard One"
     },
+    "e101aea0-461d-4002-a2ab-c2c2b74c83e4": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/e101aea0-461d-4002-a2ab-c2c2b74c83e4/original/book.epub",
+      "id": "e101aea0-461d-4002-a2ab-c2c2b74c83e4",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-10-01T16:39:25.733Z",
+      "subjects": [
+        "Biology"
+      ],
+      "title": "Biology for Advanced Secondary Schools Student’s Book Form Five"
+    },
     "e11564b1-6458-4b9c-bcdf-bec0a03a7dc1": {
       "classes": [
         "Standard One"
@@ -4078,21 +4078,6 @@
       ],
       "title": "General and Inorganic Chemistry for Advanced Secondary Schools"
     },
-    "faec4c73-cff1-4b04-a831-e22a86224a6b": {
-      "classes": [
-        "Form Five"
-      ],
-      "fileUrl": "/content/epub/faec4c73-cff1-4b04-a831-e22a86224a6b/original/book.epub",
-      "id": "faec4c73-cff1-4b04-a831-e22a86224a6b",
-      "levels": [
-        "Advanced Secondary Level"
-      ],
-      "publishedAt": "2026-07-30T18:44:14.547Z",
-      "subjects": [
-        "Biology"
-      ],
-      "title": "Biology for Advanced Secondary Schools Student’s Book Form Five"
-    },
     "fb10247e-61aa-4a95-bb88-dafe02b5d2fc": {
       "classes": [
         "Form Two"
@@ -4185,7 +4170,7 @@
     }
   },
   "api_ever_ok": true,
-  "api_total": 278,
+  "api_total": 277,
   "cdx_digests": {
     "https://ol.tie.go.tz/uploaded_files/books//secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page48.html": "L3MMJTXUIVBZ4OP7QRNULNIFIFJ65SZ3",
     "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL/FLIP/ADVANCED%20MATH.html": "QRDWYY3UWMHATEQSKQKPRM2XBR4U7JZF",
@@ -4304,7 +4289,7 @@
   "direct_dirs": {
     "https://ol.tie.go.tz/uploaded_files/books/": {
       "children": [],
-      "hash": "38050d43bef028fa12d76e98f66116b506c670af75e67ac2933cd9e4c8189a35",
+      "hash": "d87a3fe5d6a82e8c80100393e8d1e02811638107b6a86bb8d9ce54ab0c9cfd48",
       "ok": true
     }
   },
@@ -4421,7 +4406,7 @@
     "https://www.tie.go.tz/news/wizara-ya-elimu-kuendelea-kuunga-mkono-juhudi-za-waandishi-bunifu"
   ],
   "last_direct_reachable": true,
-  "last_run": "2026-10-01T15:25:27.772054+00:00",
+  "last_run": "2026-10-01T21:00:36.476887+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
   "outage_alerted": false,
