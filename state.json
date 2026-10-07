@@ -4289,7 +4289,7 @@
   "direct_dirs": {
     "https://ol.tie.go.tz/uploaded_files/books/": {
       "children": [],
-      "hash": "0e118e049b42ce9fa5e8dace701842cc75211cb0d2b7e8749baf2aa37cb7b79f",
+      "hash": "a8aa4085f7741bba458eb954ed1cbd4a49a9289981ac07fc3be59557ed354211",
       "ok": true
     }
   },
@@ -4406,7 +4406,7 @@
     "https://www.tie.go.tz/news/wizara-ya-elimu-kuendelea-kuunga-mkono-juhudi-za-waandishi-bunifu"
   ],
   "last_direct_reachable": true,
-  "last_run": "2026-10-07T05:53:31.460047+00:00",
+  "last_run": "2026-10-07T15:31:58.708666+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
   "outage_alerted": false,
