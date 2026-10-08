@@ -1778,7 +1778,7 @@
     },
     "66716791-f666-4246-a860-adb7068140e4": {
       "classes": [
-        "Standard Four"
+        "Darasa la Nne"
       ],
       "fileUrl": "/content/epub/66716791-f666-4246-a860-adb7068140e4/original/book.epub",
       "id": "66716791-f666-4246-a860-adb7068140e4",
@@ -1787,7 +1787,7 @@
       ],
       "publishedAt": "2026-09-16T20:49:53.389Z",
       "subjects": [
-        "Mathematics"
+        "Hisabati"
       ],
       "title": "Hisabati Kitabu cha Mwanafunzi Darasa la Nne"
     },
@@ -3475,8 +3475,7 @@
     },
     "d55a549b-69f3-446f-bb78-fd12209be36e": {
       "classes": [
-        "Darasa la Tatu",
-        "Standard Three"
+        "Darasa la Tatu"
       ],
       "fileUrl": "/content/epub/d55a549b-69f3-446f-bb78-fd12209be36e/original/book.epub",
       "id": "d55a549b-69f3-446f-bb78-fd12209be36e",
@@ -3876,8 +3875,7 @@
       ],
       "publishedAt": "2026-08-04T12:50:30.590Z",
       "subjects": [
-        "French",
-        "Sayansi"
+        "French"
       ],
       "title": "Bonjour les Amis ! Méthode de français Livre de l’élève 2"
     },
@@ -4401,12 +4399,13 @@
     "https://www.tie.go.tz/news/prof-mkenda-awataka-watanzania-kujikita-katika-usomaji-wa-vitabu-vya-ndani",
     "https://www.tie.go.tz/news/taasisi-ya-elimu-tanzania-imezindua-maabara-za-kompyuta-shule-ya-sekondari-kimara-na-shule-ya-msingi-mkwawa",
     "https://www.tie.go.tz/news/tanzania-kuwa-mwenyeji-wa-kongamano-la-sita-la-jumuiya-ya-taasisi-za-mitaala-afrika",
+    "https://www.tie.go.tz/news/tet-yapongezwa-uwekezaji-katika-teknolojia-za-elimu",
     "https://www.tie.go.tz/news/uzinduzi-wa-vitabu-vya-tuzo-ya-taifa-ya-mwalimu-nyerere-ya-uandishi-bunifu-hatua-mpya-kukuza-elimu-na-vipaji-vya-ndani",
     "https://www.tie.go.tz/news/wajumbe-wa-aca-watembelea-shule-ya-baobab",
     "https://www.tie.go.tz/news/wizara-ya-elimu-kuendelea-kuunga-mkono-juhudi-za-waandishi-bunifu"
   ],
   "last_direct_reachable": true,
-  "last_run": "2026-10-08T05:57:37.696613+00:00",
+  "last_run": "2026-10-08T15:33:32.751580+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
   "outage_alerted": false,
