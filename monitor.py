@@ -45,12 +45,13 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 # ----------------------------------------------------------------- configuration
 
 OL = os.environ.get("TIE_OL_BASE", "https://ol.tie.go.tz")
 WWW_NEWS = "https://www.tie.go.tz/news"
+EAT = timezone(timedelta(hours=3))   # East Africa Time (Tanzania, UTC+3, no DST)
 
 BOOKS_PREFIX = "/uploaded_files/books/"        # legacy static tree (2025 and earlier)
 
@@ -425,6 +426,61 @@ def send_whatsapp(text):
 
 # ------------------------------------------------------------------ main
 
+def daily_digest_text(api_ok, api_books, now):
+    """Compose the ~8 pm EAT daily WhatsApp summary (str).
+
+    Sent once a day even when nothing changed — "TIE hasn't uploaded anything
+    today yet" — and summarises the day's uploads when there were some.
+    """
+    now_eat = now.astimezone(EAT)
+    header = now_eat.strftime("📖 *TIE daily summary* — %a %d %b %Y")
+
+    if not api_ok:
+        return (header
+                + "\n\n⚠️ I couldn't reach the TIE e-Library just now, so I can't "
+                "confirm today's uploads. I keep checking around the clock and "
+                "will alert you the moment it responds again.")
+
+    today = now_eat.date()
+    todays = []
+    for b in api_books.values():
+        ts = b.get("publishedAt")
+        if not ts:
+            continue
+        try:
+            d = datetime.fromisoformat(str(ts).replace("Z", "+00:00"))
+        except Exception:
+            continue
+        if d.astimezone(EAT).date() == today:
+            todays.append(b)
+    total = len(api_books)
+
+    if not todays:
+        return (header
+                + "\n\n✅ TIE hasn't uploaded any new book today.\n"
+                + f"📚 The catalogue holds {total} books — I keep checking "
+                "around the clock and will alert you the moment something new "
+                "appears.")
+
+    todays.sort(key=lambda b: str(b.get("publishedAt") or ""), reverse=True)
+    if len(todays) > 15:      # bulk re-publish: listing every title is absurd
+        return (header
+                + f"\n\n📚 Big catalogue update today: {len(todays)} books carry "
+                "today's publication date (likely a bulk re-publish). "
+                + f"The catalogue now holds {total} books.")
+    lines = []
+    for b in todays[:4]:
+        ctx = ", ".join(x for x in (", ".join(b.get("classes") or []),
+                                     ", ".join(b.get("subjects") or [])) if x)
+        lines.append("• " + (b.get("title") or "Untitled")
+                     + (f" ({ctx[:60]})" if ctx else ""))
+    more = "" if len(todays) <= 4 else f"\n…and {len(todays) - 4} more"
+    return (header
+            + f"\n\n📚 Uploaded today: {len(todays)} book(s):\n"
+            + "\n".join(lines) + more
+            + f"\n📚 The catalogue now holds {total} books.")
+
+
 def main():
     test_mode = os.environ.get("TEST_MODE") == "1"
     state = load_state()
@@ -631,6 +687,22 @@ def main():
     # -------------------------------------------------- phase 5: analysis
     log("── Phase 5: analysis")
     if not first_run:
+        # TIE often replaces a book with a new record (new id) instead of
+        # updating it in place — the same title disappears and reappears.
+        # Report such pairs as "updated", not as new + removed.
+        if new_api and removed_api:
+            gone_titles = {(b.get("title") or "?") for b in removed_api}
+            replaced = [b for b in new_api
+                        if (b.get("title") or "?") in gone_titles]
+            if replaced:
+                rep_titles = {(b.get("title") or "?") for b in replaced}
+                new_api = [b for b in new_api
+                           if (b.get("title") or "?") not in gone_titles]
+                removed_api = [b for b in removed_api
+                               if (b.get("title") or "?") not in rep_titles]
+                updated_api = list(updated_api) + replaced
+                log(f"  ♻️ {len(replaced)} same-title replacement(s) -> 'updated'")
+
         # new books — live catalogue API (PRIMARY, exact)
         if new_api:
             lines = []
@@ -738,13 +810,39 @@ def main():
                 "ℹ️ The TIE e-Library is reachable again — live catalogue checks "
                 f"resumed.{note}")
 
+    # -------------------------------------------------- daily digest (~20:00 EAT)
+    # Sent by the 17:03 UTC scheduled run. If GitHub dropped or badly delayed
+    # that run, any later run before EAT midnight (21:00 UTC) sends it instead,
+    # so the daily WhatsApp message is as reliable as the monitor itself.
+    today_eat = now.astimezone(EAT).date().isoformat()
+    digest_catchup = False
+    digest_due = os.environ.get("DAILY_DIGEST") == "1"
+    if (not digest_due and not first_run
+            and 17 <= now.hour <= 20
+            and state.get("last_digest_date") != today_eat):
+        digest_due, digest_catchup = True, True
+        log("  digest catch-up: today's daily summary (EAT) was not sent yet")
+    digest_included = False
+    if digest_due and not first_run:
+        messages.insert(0, daily_digest_text(api_ok, api_books, now))
+        digest_included = True
+        log("  daily digest prepended to the message")
+
     # -------------------------------------------------- send / save state
+    sent_ok = False
     if messages:
         text = "🔔 *TIE Library update*\n\n" + "\n\n".join(messages)
         log(f"sending WhatsApp ({len(text)} chars):\n{text[:1600]}")
-        send_whatsapp(text[:1600])
+        sent_ok = send_whatsapp(text[:1600])
     elif not first_run:
         log("no changes detected — no notification sent")
+
+    # a scheduled/catch-up digest only counts as done once WhatsApp accepted
+    # it; manual dispatch tests (DIGEST_RECORD unset) don't consume the day's
+    # digest, so the real 8 pm EAT message still goes out afterwards
+    if (digest_included and sent_ok
+            and (digest_catchup or os.environ.get("DIGEST_RECORD") == "1")):
+        state["last_digest_date"] = today_eat
 
     if first_run:
         send_whatsapp("✅ *TIE Library Monitor is now ACTIVE.*\n"

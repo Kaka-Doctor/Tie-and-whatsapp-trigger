@@ -14,6 +14,7 @@ messages through **CallMeBot** (free for personal use).
 
 | Event | Message |
 |---|---|
+| **Daily summary ~8:00 pm EAT** — what was uploaded today, or "TIE hasn't uploaded any new book today" (sent every day, even when nothing changed) | 📖 *TIE daily summary* |
 | **Any new book uploaded** to the library (exact, from the live catalogue API) | 📚 *New book(s) uploaded to the TIE e-Library* (with title + link) |
 | An existing book is **re-published / updated** | ♻️ *Book(s) re-published or updated* |
 | A book is **removed or archived** | ⚠️ *Book(s) no longer listed* |
@@ -40,7 +41,7 @@ One plain "check the website" script would therefore be blind most of the
 time. This monitor therefore combines **five signal paths**, every run:
 
 ```
- GitHub Actions (every 4h at :17 past the hour, free)
+ GitHub Actions (every 4h at :17 + daily digest at 20:03 EAT, free)
         │
         ├─ 1) PUBLIC CATALOGUE API ──────── ol.tie.go.tz/api/public/books
         │       PRIMARY signal: full book list (id/title/publishedAt/file),
@@ -110,10 +111,19 @@ should arrive within ~2 minutes.
 
 ## ⏱ Changing the check frequency
 
-Edit the `cron` line in `.github/workflows/monitor.yml`
-(`"17 */4 * * *"` = every 4 hours at :17 past the hour). The off-peak minute is
- deliberate: top-of-the-hour slots (minute 0) are GitHub Actions' busiest —
-runs scheduled there are routinely delayed for hours or silently dropped.
+Two cron lines in `.github/workflows/monitor.yml` control the rhythm:
+
+- `"17 */4 * * *"` — monitoring every 4 hours at :17 past the hour. The
+  off-peak minute is deliberate: top-of-the-hour slots (minute 0) are GitHub
+  Actions' busiest — runs scheduled there are routinely delayed for hours or
+  silently dropped.
+- `"3 17 * * *"` — the **daily WhatsApp digest at 20:03 EAT (8 pm)**: what TIE
+  uploaded today, or "TIE hasn't uploaded any new book today". If GitHub
+  drops that run, the monitor self-catches-up on the next run before EAT
+  midnight, so you still get your daily message.
+
+You can also trigger the digest manually: **Actions → TIE Library Monitor →
+Run workflow → tick "Send the daily digest WhatsApp message now"**.
 
 > **Cost note:** this repo is private, so free Actions minutes are capped at
 > 2,000/month. At every-4-hours and ~2–4 min/run you'll use ~500–700 — safe.
@@ -142,6 +152,10 @@ All knobs are constants at the top of `monitor.py`:
 
 ## ⚠️ Known limitations (honesty section)
 
+- GitHub's scheduler is best-effort: in practice roughly half of the 4-hourly
+  slots are delayed (by minutes to hours) or skipped entirely, so worst-case
+  detection latency is ~8 hours rather than 4. The daily digest is protected
+  from this by its catch-up logic.
 - The catalogue API is the exact source of truth while it answers: new uploads,
   re-publications and delistings are detected precisely, with book titles and
   links. If the site blocks foreign IPs again, the monitor falls back to the

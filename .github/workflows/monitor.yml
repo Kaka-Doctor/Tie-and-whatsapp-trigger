@@ -8,10 +8,19 @@ on:
     # scheduled runs there are routinely delayed for hours or dropped, so we
     # deliberately fire off-peak.
     - cron: "17 */4 * * *"
+    # Daily WhatsApp digest at 20:03 EAT (17:03 UTC): what TIE uploaded today,
+    # or a plain "TIE hasn't uploaded anything today" — sent every day even
+    # when nothing changed. (monitor.py also self-catches-up if GitHub drops
+    # this run — any later run before EAT midnight sends the summary.)
+    - cron: "3 17 * * *"
   workflow_dispatch:
     inputs:
       send_test:
         description: "Send a test WhatsApp message (checks CallMeBot setup)"
+        type: boolean
+        default: false
+      send_digest:
+        description: "Send the daily digest WhatsApp message now (checks the 8 pm EAT summary)"
         type: boolean
         default: false
   push:
@@ -45,6 +54,11 @@ jobs:
           WHATSAPP_PHONE: ${{ secrets.WHATSAPP_PHONE }}
           CALLMEBOT_APIKEY: ${{ secrets.CALLMEBOT_APIKEY }}
           TEST_MODE: ${{ github.event.inputs.send_test == 'true' && '1' || '0' }}
+          # daily digest: scheduled 17:03 UTC run, or a manual dispatch test
+          DAILY_DIGEST: ${{ (github.event.schedule == '3 17 * * *' || github.event.inputs.send_digest == 'true') && '1' || '0' }}
+          # only the scheduled digest may mark the day as digested, so manual
+          # dispatch tests don't suppress the real 8 pm EAT message
+          DIGEST_RECORD: ${{ github.event.schedule == '3 17 * * *' && '1' || '0' }}
         run: python3 monitor.py
 
       - name: Commit updated state
