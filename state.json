@@ -4287,7 +4287,7 @@
   "direct_dirs": {
     "https://ol.tie.go.tz/uploaded_files/books/": {
       "children": [],
-      "hash": "881c9e1ff6f566d2ec0a59c1f6ccf10713947aa2cb3b7e768ddc262946048dfc",
+      "hash": "5342fa7ae00810837ba6bea7213cff1b6cd965b1c554336ad20dd04e54afead2",
       "ok": true
     }
   },
@@ -4406,7 +4406,7 @@
   ],
   "last_digest_date": "2026-10-15",
   "last_direct_reachable": true,
-  "last_run": "2026-10-16T04:26:01.763253+00:00",
+  "last_run": "2026-10-17T15:29:29.237492+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
   "outage_alerted": false,
