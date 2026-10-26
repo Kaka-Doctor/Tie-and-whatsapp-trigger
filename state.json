@@ -720,6 +720,21 @@
       ],
       "title": "Historia ya Tanzania na Maadili Kitabu cha Mwanafunzi Kidato cha Pili"
     },
+    "2ad1f288-40d5-4f6d-a893-6ce12ca513e1": {
+      "classes": [
+        "Kundirika la Kwanza Mwaka wa Pili"
+      ],
+      "fileUrl": "/content/epub/2ad1f288-40d5-4f6d-a893-6ce12ca513e1/original/book.epub",
+      "id": "2ad1f288-40d5-4f6d-a893-6ce12ca513e1",
+      "levels": [
+        "COBET / MEMKWA"
+      ],
+      "publishedAt": "2026-10-26T15:37:22.457Z",
+      "subjects": [
+        "Sayansi"
+      ],
+      "title": "Sayansi na Teknolojia Kitabu cha Mwanafunzi Kundirika la Kwanza Mwaka wa Pili"
+    },
     "2b896607-64e6-4bf7-99e9-0480bf18934f": {
       "classes": [
         "Form Two"
@@ -885,6 +900,21 @@
         "Writing"
       ],
       "title": "Writing Pupil’s Book Standard Two"
+    },
+    "34c2ba8c-7a31-441b-bc82-9faadce32682": {
+      "classes": [
+        "Kundirika la Kwanza Mwaka wa Pili"
+      ],
+      "fileUrl": "/content/epub/34c2ba8c-7a31-441b-bc82-9faadce32682/original/book.epub",
+      "id": "34c2ba8c-7a31-441b-bc82-9faadce32682",
+      "levels": [
+        "COBET / MEMKWA"
+      ],
+      "publishedAt": "2026-10-26T15:32:09.182Z",
+      "subjects": [
+        "Hisabati"
+      ],
+      "title": "Hisabati Kitabu cha Mwanafunzi Kundirika la Kwanza Mwaka wa Pili"
     },
     "34cdebae-5098-41cd-90ec-9a723dcbd0b8": {
       "classes": [
@@ -2346,6 +2376,21 @@
       ],
       "title": "Culture, Art and Sports Pupil’s Book Standard Two"
     },
+    "8a4ed93a-3933-4736-b41d-6ed4ca2b7741": {
+      "classes": [
+        "Kundirika la Kwanza Mwaka wa Kwanza"
+      ],
+      "fileUrl": "/content/epub/8a4ed93a-3933-4736-b41d-6ed4ca2b7741/original/book.epub",
+      "id": "8a4ed93a-3933-4736-b41d-6ed4ca2b7741",
+      "levels": [
+        "COBET / MEMKWA"
+      ],
+      "publishedAt": "2026-10-26T15:20:48.686Z",
+      "subjects": [
+        "Afya na Mazingira"
+      ],
+      "title": "Afya na Mazingira Kitabu cha Mwanafunzi Kundirika la Kwanza Mwaka wa Kwanza"
+    },
     "8b358584-3e77-4e69-9734-0d1803f588bf": {
       "classes": [
         "Darasa la Tano"
@@ -2510,6 +2555,21 @@
         "Fitter Machinist"
       ],
       "title": "Field Crop Production for Secondary Schools Vocational Stream Student’s Book Form Three"
+    },
+    "93724039-976c-472a-a3d0-606a5c3c90c9": {
+      "classes": [
+        "Kundirika la Kwanza Mwaka wa Kwanza"
+      ],
+      "fileUrl": "/content/epub/93724039-976c-472a-a3d0-606a5c3c90c9/original/book.epub",
+      "id": "93724039-976c-472a-a3d0-606a5c3c90c9",
+      "levels": [
+        "COBET / MEMKWA"
+      ],
+      "publishedAt": "2026-10-26T15:32:17.184Z",
+      "subjects": [
+        "Kusoma"
+      ],
+      "title": "Kusoma Kitabu cha Mwanafunzi Kundirika la Kwanza Mwaka wa Kwanza"
     },
     "943b1ba6-8bfc-4296-914d-ba1483455726": {
       "classes": [
@@ -3157,6 +3217,21 @@
       ],
       "title": "Fine Art For Advanced Secondary Schools Student’s Book Form Five"
     },
+    "ba605a53-6cbe-4713-ac1e-21e7f2995780": {
+      "classes": [
+        "Kundirika la Kwanza Mwaka wa Kwanza"
+      ],
+      "fileUrl": "/content/epub/ba605a53-6cbe-4713-ac1e-21e7f2995780/original/book.epub",
+      "id": "ba605a53-6cbe-4713-ac1e-21e7f2995780",
+      "levels": [
+        "COBET / MEMKWA"
+      ],
+      "publishedAt": "2026-10-26T15:32:14.004Z",
+      "subjects": [
+        "Kuandika"
+      ],
+      "title": "Kuandika Kitabu cha Mwanafunzi Kundirika la Kwanza Mwaka wa Kwanza"
+    },
     "bcc626de-314c-47cf-8e7d-e8aae9667f18": {
       "classes": [
         "Form One"
@@ -3276,6 +3351,21 @@
         "Utamaduni, Sanaa na Michezo"
       ],
       "title": "Utamaduni, Sanaa  na Michezo Kitabu cha Mwanafunzi Darasa la Pili"
+    },
+    "c694413b-85d6-4ac6-9737-bef8d31918dc": {
+      "classes": [
+        "Form Five"
+      ],
+      "fileUrl": "/content/epub/c694413b-85d6-4ac6-9737-bef8d31918dc/original/book.epub",
+      "id": "c694413b-85d6-4ac6-9737-bef8d31918dc",
+      "levels": [
+        "Advanced Secondary Level"
+      ],
+      "publishedAt": "2026-10-26T15:21:02.665Z",
+      "subjects": [
+        "Computer Science"
+      ],
+      "title": "Computer Science for Advanced Secondary Schools Student’s Book Form Five"
     },
     "c87db28b-ee37-4848-829d-ea0c960cf6e9": {
       "classes": [
@@ -4168,7 +4258,7 @@
     }
   },
   "api_ever_ok": true,
-  "api_total": 277,
+  "api_total": 283,
   "cdx_digests": {
     "https://ol.tie.go.tz/uploaded_files/books//secondary/Form_One/Sports_Studies_Form_One/files/basic-html/page48.html": "L3MMJTXUIVBZ4OP7QRNULNIFIFJ65SZ3",
     "https://ol.tie.go.tz/uploaded_files/books/adv_secondary/frmv/ADVANCED%20MATH%20F.5%20-FINAL/FLIP/ADVANCED%20MATH.html": "QRDWYY3UWMHATEQSKQKPRM2XBR4U7JZF",
@@ -4406,9 +4496,9 @@
     "https://www.tie.go.tz/news/wajumbe-wa-aca-watembelea-shule-ya-baobab",
     "https://www.tie.go.tz/news/wizara-ya-elimu-kuendelea-kuunga-mkono-juhudi-za-waandishi-bunifu"
   ],
-  "last_digest_date": "2026-10-25",
+  "last_digest_date": "2026-10-26",
   "last_direct_reachable": true,
-  "last_run": "2026-10-26T15:09:21.618526+00:00",
+  "last_run": "2026-10-26T20:59:43.252406+00:00",
   "last_spn_home_saved": false,
   "last_spn_watch_saved": false,
   "outage_alerted": false,
